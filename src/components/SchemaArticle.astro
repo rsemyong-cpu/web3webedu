@@ -1,0 +1,39 @@
+---
+import SchemaJsonLd from "./SchemaJsonLd.astro";
+import { absoluteUrl, SITE } from "@/lib/site";
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  publishedAt: Date;
+  updatedAt: Date;
+  author: string;
+  image?: string;
+}
+
+const { title, description, path, publishedAt, updatedAt, author, image = SITE.defaultImage } =
+  Astro.props;
+
+const data = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  description,
+  url: absoluteUrl(path, Astro.site),
+  image: image.startsWith("http") ? image : absoluteUrl(image, Astro.site),
+  datePublished: publishedAt.toISOString(),
+  dateModified: updatedAt.toISOString(),
+  author: {
+    "@type": "Organization",
+    name: author
+  },
+  publisher: {
+    "@type": "Organization",
+    name: SITE.name,
+    url: absoluteUrl("/", Astro.site)
+  }
+};
+---
+
+<SchemaJsonLd data={data} />

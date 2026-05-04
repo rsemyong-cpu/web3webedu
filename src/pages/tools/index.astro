@@ -1,0 +1,10 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import CollectionIndex from "@/components/CollectionIndex.astro";
+import { getSectionEntries } from "@/lib/content";
+const entries = await getSectionEntries("tools");
+---
+
+<BaseLayout title="工具与数据" description="提供注册商加密支付对比、USDT购买域名风险清单、域名隐私保护清单、WHOIS/RDAP 与 DNSSEC 指南。" path="/tools/">
+  <CollectionIndex title="工具与数据" description="工具页用表格、检查项、更新时间和风险评级支持实用型搜索与 AI 搜索摘要。" entries={entries} eyebrow="Tools" />
+</BaseLayout>

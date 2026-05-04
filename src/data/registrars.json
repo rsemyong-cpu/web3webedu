@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Registrar A",
+    "supportsUSDT": "需人工核验",
+    "chains": ["TRC20", "ERC20"],
+    "kyc": "视账户与风控要求而定",
+    "whoisPrivacy": "支持部分TLD",
+    "invoice": "需确认",
+    "refund": "加密支付通常不可逆，按注册商政策处理",
+    "dnssec": "支持部分TLD",
+    "tlds": [".com", ".net", ".org"],
+    "riskRating": "medium",
+    "updatedAt": "2026-05-04"
+  },
+  {
+    "name": "Registrar B",
+    "supportsUSDT": "未确认",
+    "chains": ["BTC", "USDC"],
+    "kyc": "可能要求",
+    "whoisPrivacy": "支持",
+    "invoice": "支持",
+    "refund": "按订单状态处理",
+    "dnssec": "支持",
+    "tlds": [".com", ".io", ".xyz"],
+    "riskRating": "medium",
+    "updatedAt": "2026-05-04"
+  },
+  {
+    "name": "Registrar C",
+    "supportsUSDT": "第三方支付网关",
+    "chains": ["TRC20", "Polygon"],
+    "kyc": "支付网关可能要求",
+    "whoisPrivacy": "支持部分TLD",
+    "invoice": "需确认",
+    "refund": "链上支付退款流程复杂",
+    "dnssec": "需按TLD确认",
+    "tlds": [".com", ".dev", ".app"],
+    "riskRating": "high",
+    "updatedAt": "2026-05-04"
+  }
+]

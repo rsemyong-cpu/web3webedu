@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /login/
+Disallow: /search/
+Disallow: /api/
+Disallow: /preview/
+Disallow: /drafts/
+
+Sitemap: https://web3-domain-institute.edu.pl/sitemap.xml

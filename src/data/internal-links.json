@@ -1,0 +1,16 @@
+{
+  "buy-domain-with-usdt": [
+    { "title": "USDT购买域名完整指南", "url": "/library/buy-domain-with-usdt/" },
+    { "title": "USDT购买域名是否需要KYC", "url": "/library/buy-domain-with-usdt/kyc/" },
+    { "title": "TRC20和ERC20支付区别", "url": "/library/buy-domain-with-usdt/trc20-vs-erc20/" },
+    { "title": "USDT购买域名风险检查清单", "url": "/tools/usdt-domain-risk-checklist/" },
+    { "title": "2026 USDT购买域名研究报告", "url": "/reports/2026-usdt-domain-report/" }
+  ],
+  "private-domain-registration": [
+    { "title": "隐私域名注册完整指南", "url": "/library/private-domain-registration/" },
+    { "title": "匿名注册和隐私保护的区别", "url": "/library/private-domain-registration/anonymous-vs-private/" },
+    { "title": "WHOIS隐私保护", "url": "/glossary/whois/" },
+    { "title": "域名隐私保护检查清单", "url": "/tools/domain-privacy-checklist/" },
+    { "title": "2026 域名隐私与合规报告", "url": "/reports/2026-domain-privacy-compliance-report/" }
+  ]
+}

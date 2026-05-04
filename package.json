@@ -1,0 +1,36 @@
+{
+  "name": "web3-domain-institute",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "npm run validate && npm run generate:rss && npm run generate:sitemaps && astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "seed": "node scripts/seed-content.mjs",
+    "generate": "tsx scripts/generate-content.ts",
+    "update": "tsx scripts/update-content.ts",
+    "validate": "npm run validate:seo && npm run validate:compliance",
+    "validate:seo": "tsx scripts/validate-seo.ts",
+    "validate:compliance": "tsx scripts/validate-compliance.ts",
+    "generate:rss": "tsx scripts/generate-rss.ts",
+    "generate:sitemaps": "tsx scripts/generate-sitemap.ts",
+    "build:static": "tsx scripts/build-static.ts"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/mdx": "^4.0.8",
+    "@astrojs/rss": "^4.0.11",
+    "@astrojs/sitemap": "^3.2.1",
+    "astro": "^5.1.1",
+    "fast-glob": "^3.3.3",
+    "gray-matter": "^4.0.3",
+    "openai": "^6.9.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,10 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import CollectionIndex from "@/components/CollectionIndex.astro";
+import { getSectionEntries } from "@/lib/content";
+const entries = await getSectionEntries("faq");
+---
+
+<BaseLayout title="问答中心" description="用直接问答覆盖 USDT购买域名、隐私注册、Web3域名、DNS安全与稳定币经济的 AI 搜索需求。" path="/faq/">
+  <CollectionIndex title="问答中心" description="FAQ 页面开头直接回答问题，并保留风险边界、更新时间、作者与参考资料。" entries={entries} eyebrow="FAQ" />
+</BaseLayout>

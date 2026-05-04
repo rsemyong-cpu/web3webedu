@@ -1,0 +1,29 @@
+{
+  "daily": [
+    {
+      "cluster": "buy-domain-with-usdt",
+      "type": "longtail",
+      "count": 1
+    }
+  ],
+  "weekly": [
+    {
+      "task": "update_registrar_comparison",
+      "path": "/tools/crypto-domain-registrar-comparison/"
+    },
+    {
+      "task": "publish_weekly_briefing",
+      "section": "news"
+    }
+  ],
+  "monthly": [
+    {
+      "task": "refresh_pillar_pages"
+    }
+  ],
+  "quarterly": [
+    {
+      "task": "generate_research_report"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import { formatDate } from "@/lib/content";
+
+const authors = await getCollection("authors", ({ data }) => data.index !== false);
+---
+
+<BaseLayout title="作者与编辑团队" description="列出 Web3 Domain Institute 的编辑团队、研究作者、贡献方向与利益冲突声明。" path="/people/">
+  <header class="index-hero">
+    <p class="eyebrow">People</p>
+    <h1>作者与编辑团队</h1>
+    <p>不虚构教授、学历或机构资质。作者页只展示研究方向、职责、披露声明和内容列表。</p>
+  </header>
+  <section class="section">
+    <div class="entry-grid">
+      {authors.map((author) => (
+        <a class="entry-link" href={`/people/${author.data.slug ?? author.slug}/`}>
+          <span>
+            <strong>{author.data.name}</strong>
+            <p>{author.data.description}</p>
+          </span>
+          <span class="meta-line">{author.data.role} / 更新：{formatDate(author.data.updatedAt)}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

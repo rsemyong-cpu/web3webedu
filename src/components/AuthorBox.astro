@@ -1,0 +1,16 @@
+---
+interface Props {
+  author: string;
+  reviewer?: string;
+}
+
+const { author, reviewer } = Astro.props;
+---
+
+<section class="author-box" aria-label="作者信息">
+  <strong>{author}</strong>
+  <p>
+    编辑团队按研究型内容流程维护页面，重点检查定义、风险边界、内链结构、资料来源与更新时间。
+    {reviewer && <> 审稿：{reviewer}。</>}
+  </p>
+</section>

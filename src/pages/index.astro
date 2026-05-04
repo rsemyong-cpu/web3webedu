@@ -1,0 +1,123 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getPublishedEntries, entryPath, formatDate } from "@/lib/content";
+import topicClusters from "@/data/topic-clusters.json";
+import registrars from "@/data/registrars.json";
+import { SITE } from "@/lib/site";
+
+const libraryEntries = await getPublishedEntries("library");
+const researchEntries = await getPublishedEntries("research");
+const reportEntries = await getPublishedEntries("reports");
+const toolEntries = await getPublishedEntries("tools");
+const latest = [...libraryEntries, ...researchEntries, ...reportEntries]
+  .sort((a, b) => b.data.updatedAt.valueOf() - a.data.updatedAt.valueOf())
+  .slice(0, 6);
+---
+
+<BaseLayout title="Web3域名与稳定币研究学院" description={SITE.description} path="/">
+  <section class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Web3 Domain Institute</p>
+      <h1>Web3域名与稳定币研究学院</h1>
+      <p class="hero-copy">
+        研究加密支付与域名基础设施，理解 Web3 时代的数字身份入口。覆盖 USDT 购买域名、隐私域名注册、Web3 域名、DNS 安全与稳定币经济。
+      </p>
+      <div class="hero-actions">
+        <a class="button primary" href="/library/buy-domain-with-usdt/">USDT购买域名指南</a>
+        <a class="button light" href="/research/">查看研究中心</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>核心研究方向</h2>
+      <p>首页不堆关键词，而是把权重分发给清晰的主题集群、支柱页、工具页和报告页。</p>
+    </div>
+    <div class="cluster-grid">
+      {topicClusters.map((cluster) => (
+        <a class="cluster-link" href={cluster.pillar}>
+          <span>
+            <strong>{cluster.name}</strong>
+            <p>{cluster.intent}</p>
+          </span>
+          <span class="meta-line">{cluster.section} / pillar page</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="section">
+      <div class="section-header">
+        <h2>最新研究与资料</h2>
+        <p>内容以 Markdown/MDX 沉淀，自动生成 sitemap、RSS、结构化数据与内链模块。</p>
+      </div>
+      <div class="entry-grid">
+        {latest.map((entry) => (
+          <a class="entry-link" href={entryPath(entry)}>
+            <span>
+              <strong>{entry.data.title}</strong>
+              <p>{entry.data.description}</p>
+            </span>
+            <span class="meta-line">更新：{formatDate(entry.data.updatedAt)}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>工具与数据入口</h2>
+      <p>工具页承接实用型搜索意图，也为 AI 搜索提供结构化表格、更新时间和风险说明。</p>
+    </div>
+    <div class="tool-grid">
+      {toolEntries.slice(0, 3).map((entry) => (
+        <a class="tool-link" href={entryPath(entry)}>
+          <span>
+            <strong>{entry.data.title}</strong>
+            <p>{entry.data.description}</p>
+          </span>
+          <span class="meta-line">{entry.data.schemaType}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="section">
+      <div class="section-header">
+        <h2>注册商对比快照</h2>
+        <p>示例数据使用保守表述，真实发布前应由脚本或编辑流程核验注册商政策、支付链、退款与发票规则。</p>
+      </div>
+      <div class="registrar-table">
+        <table>
+          <thead>
+            <tr>
+              <th>注册商</th>
+              <th>USDT</th>
+              <th>KYC</th>
+              <th>WHOIS隐私</th>
+              <th>风险</th>
+            </tr>
+          </thead>
+          <tbody>
+            {registrars.map((item) => (
+              <tr>
+                <td>{item.name}</td>
+                <td>{item.supportsUSDT}</td>
+                <td>{item.kyc}</td>
+                <td>{item.whoisPrivacy}</td>
+                <td>{item.riskRating}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div class="section-actions">
+        <a class="button" href="/tools/crypto-domain-registrar-comparison/">查看完整对比表</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

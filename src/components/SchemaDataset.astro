@@ -1,0 +1,27 @@
+---
+import SchemaJsonLd from "./SchemaJsonLd.astro";
+import { absoluteUrl, SITE } from "@/lib/site";
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  updatedAt: Date;
+}
+
+const { title, description, path, updatedAt } = Astro.props;
+const data = {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  name: title,
+  description,
+  url: absoluteUrl(path, Astro.site),
+  dateModified: updatedAt.toISOString(),
+  creator: {
+    "@type": "Organization",
+    name: SITE.name
+  }
+};
+---
+
+<SchemaJsonLd data={data} />

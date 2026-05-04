@@ -1,0 +1,19 @@
+---
+interface RelatedItem {
+  title: string;
+  url: string;
+}
+
+interface Props {
+  links: RelatedItem[];
+}
+
+const { links } = Astro.props;
+---
+
+{links.length > 0 && (
+  <nav class="internal-links" aria-label="主题内链">
+    <strong>主题路径</strong>
+    {links.slice(0, 8).map((item) => <a href={item.url}>{item.title}</a>)}
+  </nav>
+)}

@@ -1,0 +1,31 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { formatDate } from "@/lib/content";
+
+export async function getStaticPaths() {
+  const authors = await getCollection("authors", ({ data }) => data.index !== false);
+  return authors.map((author) => ({ params: { slug: author.data.slug ?? author.slug }, props: { author } }));
+}
+
+const { author } = Astro.props;
+---
+
+<BaseLayout title={author.data.name} description={author.data.description} path={`/people/${author.data.slug ?? author.slug}/`} type="profile">
+  <header class="index-hero">
+    <p class="eyebrow">{author.data.role}</p>
+    <h1>{author.data.name}</h1>
+    <p>{author.data.description}</p>
+  </header>
+  <section class="section">
+    <div class="prose">
+      <h2>研究方向</h2>
+      <ul>
+        {author.data.focus.map((item) => <li>{item}</li>)}
+      </ul>
+      <h2>利益冲突声明</h2>
+      <p>{author.data.disclosure}</p>
+      <p>最后更新：{formatDate(author.data.updatedAt)}</p>
+    </div>
+  </section>
+</BaseLayout>

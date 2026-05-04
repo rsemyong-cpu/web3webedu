@@ -1,0 +1,10 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import CollectionIndex from "@/components/CollectionIndex.astro";
+import { getSectionEntries } from "@/lib/content";
+const entries = await getSectionEntries("news");
+---
+
+<BaseLayout title="新闻观察" description="追踪加密支付、域名行业、Web3域名、稳定币监管与注册商政策变化。" path="/news/">
+  <CollectionIndex title="新闻观察" description="新闻页用于承接新鲜内容，研究页与支柱页按月或季度稳定更新。" entries={entries} eyebrow="News" />
+</BaseLayout>

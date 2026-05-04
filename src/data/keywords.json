@@ -1,0 +1,50 @@
+{
+  "brand": [
+    "Web3域名与稳定币研究学院",
+    "Web3 Domain Institute",
+    "Crypto Domain Research Academy"
+  ],
+  "clusters": {
+    "buy-domain-with-usdt": [
+      "USDT购买域名",
+      "usdt买域名",
+      "buy domain with USDT",
+      "USDT购买域名安全吗",
+      "USDT购买域名注册商"
+    ],
+    "buy-domain-with-crypto": [
+      "加密货币购买域名",
+      "虚拟货币购买域名",
+      "crypto domain registrar",
+      "buy domain with crypto",
+      "bitcoin domain registration"
+    ],
+    "private-domain-registration": [
+      "隐私域名注册",
+      "WHOIS隐私保护",
+      "匿名购买域名",
+      "private domain registration",
+      "anonymous domain registration"
+    ],
+    "web3-domain-identity": [
+      "Web3域名",
+      "区块链域名",
+      "ENS域名",
+      "去中心化域名",
+      "Web3身份"
+    ],
+    "stablecoin-economy": [
+      "稳定币经济",
+      "USDT跨境支付",
+      "stablecoin economy",
+      "USDT经济影响"
+    ],
+    "dns-security-governance": [
+      "DNS安全",
+      "DNSSEC",
+      "域名治理",
+      "ICANN",
+      "域名劫持"
+    ]
+  }
+}

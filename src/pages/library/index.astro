@@ -1,0 +1,10 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import CollectionIndex from "@/components/CollectionIndex.astro";
+import { getSectionEntries } from "@/lib/content";
+const entries = await getSectionEntries("library");
+---
+
+<BaseLayout title="知识库" description="围绕 USDT购买域名、加密货币购买域名、隐私域名注册、Web3域名与DNS安全建立 SEO 主题集群。" path="/library/">
+  <CollectionIndex title="知识库" description="承接支柱页与长尾问题词，所有文章包含摘要、风险提示、FAQ、相关术语、工具入口与报告入口。" entries={entries} eyebrow="Library" />
+</BaseLayout>

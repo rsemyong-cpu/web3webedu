@@ -1,0 +1,10 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import CollectionIndex from "@/components/CollectionIndex.astro";
+import { getSectionEntries } from "@/lib/content";
+const entries = await getSectionEntries("glossary");
+---
+
+<BaseLayout title="术语词典" description="解释 USDT、域名、DNS、WHOIS、RDAP、DNSSEC、Web3域名与稳定币等基础概念。" path="/glossary/">
+  <CollectionIndex title="术语词典" description="术语页承接定义型搜索，并为文章、工具和报告提供稳定内链。" entries={entries} eyebrow="Glossary" />
+</BaseLayout>

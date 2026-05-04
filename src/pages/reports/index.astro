@@ -1,0 +1,10 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import CollectionIndex from "@/components/CollectionIndex.astro";
+import { getSectionEntries } from "@/lib/content";
+const entries = await getSectionEntries("reports");
+---
+
+<BaseLayout title="报告与出版物" description="发布年度报告、行业白皮书、注册商研究、稳定币经济观察、Web3域名趋势与DNS安全报告。" path="/reports/">
+  <CollectionIndex title="报告与出版物" description="报告页用于积累原创分析、更新时间、数据集说明和可引用结论，服务 E-E-A-T 与 GEO 引用。" entries={entries} eyebrow="Reports" />
+</BaseLayout>

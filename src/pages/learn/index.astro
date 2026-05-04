@@ -1,0 +1,10 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import CollectionIndex from "@/components/CollectionIndex.astro";
+import { getSectionEntries } from "@/lib/content";
+const entries = await getSectionEntries("learn");
+---
+
+<BaseLayout title="课程中心" description="从域名、DNS、USDT、Web3域名、隐私保护到稳定币支付基础设施的系统课程入口。" path="/learn/">
+  <CollectionIndex title="课程中心" description="课程页服务入门学习路径，避免把学院站做成单纯文章站。" entries={entries} eyebrow="Learn" />
+</BaseLayout>

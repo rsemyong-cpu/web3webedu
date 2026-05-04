@@ -1,0 +1,15 @@
+---
+import type { BreadcrumbItem } from "@/lib/breadcrumbs";
+
+interface Props {
+  items: BreadcrumbItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<nav class="breadcrumbs" aria-label="面包屑">
+  <ol>
+    {items.map((item) => <li><a href={item.href}>{item.label}</a></li>)}
+  </ol>
+</nav>

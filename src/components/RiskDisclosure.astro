@@ -1,0 +1,15 @@
+---
+interface Props {
+  riskLevel?: "low" | "medium" | "high";
+}
+
+const { riskLevel = "medium" } = Astro.props;
+const label = riskLevel === "high" ? "高风险主题" : riskLevel === "low" ? "低风险主题" : "中等风险主题";
+---
+
+<aside class="notice" aria-label="风险提示">
+  <strong>风险提示：{label}</strong>
+  <p>
+    本站内容用于教育研究与资料整理，不构成金融、法律、税务或投资建议。涉及加密支付、域名注册、隐私保护或跨境服务时，应以注册商政策、适用法律、链上支付规则和专业意见为准。
+  </p>
+</aside>

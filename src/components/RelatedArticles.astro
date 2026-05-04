@@ -1,0 +1,26 @@
+---
+interface RelatedItem {
+  title: string;
+  url: string;
+}
+
+interface Props {
+  related: RelatedItem[];
+}
+
+const { related } = Astro.props;
+---
+
+{related.length > 0 && (
+  <section class="related-block" aria-labelledby="related-title">
+    <h2 id="related-title">相关阅读</h2>
+    <div class="related-list">
+      {related.map((item) => (
+        <a href={item.url}>
+          <span>{item.title}</span>
+          <span aria-hidden="true">-></span>
+        </a>
+      ))}
+    </div>
+  </section>
+)}

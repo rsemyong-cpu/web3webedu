@@ -1,0 +1,60 @@
+---
+import { entryPath, formatDate } from "@/lib/content";
+
+interface Props {
+  title: string;
+  description: string;
+  entries: any[];
+  eyebrow?: string;
+}
+
+const { title, description, entries, eyebrow = "Index" } = Astro.props;
+const featured = entries.slice(0, 3);
+const rest = entries.slice(3);
+---
+
+<header class="index-hero">
+  <p class="eyebrow">{eyebrow}</p>
+  <h1>{title}</h1>
+  <p>{description}</p>
+</header>
+
+{featured.length > 0 && (
+  <section class="section">
+    <div class="section-header">
+      <h2>优先阅读</h2>
+      <p>先从支柱页、工具页和报告页进入，再沿主题集群阅读长尾问题。</p>
+    </div>
+    <div class="entry-grid">
+      {featured.map((entry) => (
+        <a class="entry-link" href={entryPath(entry)}>
+          <span>
+            <strong>{entry.data.title}</strong>
+            <p>{entry.data.description}</p>
+          </span>
+          <span class="meta-line">更新：{formatDate(entry.data.updatedAt)}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+)}
+
+{rest.length > 0 && (
+  <section class="section">
+    <div class="section-header">
+      <h2>全部内容</h2>
+      <p>所有 URL 均采用英文小写与连字符，便于长期索引、引用和自动化维护。</p>
+    </div>
+    <div class="entry-grid">
+      {rest.map((entry) => (
+        <a class="entry-link" href={entryPath(entry)}>
+          <span>
+            <strong>{entry.data.title}</strong>
+            <p>{entry.data.description}</p>
+          </span>
+          <span class="meta-line">{entry.data.type} / {entry.data.cluster ?? entry.data.section}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+)}

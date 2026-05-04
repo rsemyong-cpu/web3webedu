@@ -1,0 +1,62 @@
+[
+  {
+    "id": "buy-domain-with-usdt",
+    "name": "USDT购买域名",
+    "section": "library",
+    "pillar": "/library/buy-domain-with-usdt/",
+    "tool": "/tools/usdt-domain-risk-checklist/",
+    "report": "/reports/2026-usdt-domain-report/",
+    "glossary": ["/glossary/usdt/", "/glossary/domain-name/"],
+    "intent": "解释USDT购买域名的流程、风险、合规边界和注册商评估方法。"
+  },
+  {
+    "id": "buy-domain-with-crypto",
+    "name": "加密货币购买域名",
+    "section": "library",
+    "pillar": "/library/buy-domain-with-crypto/",
+    "tool": "/tools/crypto-domain-registrar-comparison/",
+    "report": "/reports/2026-crypto-domain-registrar-observatory/",
+    "glossary": ["/glossary/usdt/", "/glossary/domain-name/"],
+    "intent": "比较USDT、BTC、USDC等加密支付方式在域名注册中的差异。"
+  },
+  {
+    "id": "private-domain-registration",
+    "name": "隐私域名注册",
+    "section": "library",
+    "pillar": "/library/private-domain-registration/",
+    "tool": "/tools/domain-privacy-checklist/",
+    "report": "/reports/2026-domain-privacy-compliance-report/",
+    "glossary": ["/glossary/whois/", "/glossary/rdap/"],
+    "intent": "用合规语言覆盖匿名购买域名相关需求，强调WHOIS隐私、边界和风险。"
+  },
+  {
+    "id": "web3-domain-identity",
+    "name": "Web3域名与数字身份",
+    "section": "research",
+    "pillar": "/research/web3-domain-identity/",
+    "tool": "/tools/crypto-domain-registrar-comparison/",
+    "report": "/reports/2026-web3-domain-trends/",
+    "glossary": ["/glossary/web3-domain/", "/glossary/dns/"],
+    "intent": "研究Web3域名、钱包地址、品牌保护和传统DNS之间的关系。"
+  },
+  {
+    "id": "stablecoin-economy",
+    "name": "稳定币经济影响",
+    "section": "research",
+    "pillar": "/research/stablecoin-economy/",
+    "tool": "/tools/crypto-domain-registrar-comparison/",
+    "report": "/reports/2026-stablecoin-internet-payments/",
+    "glossary": ["/glossary/usdt/", "/glossary/stablecoin/"],
+    "intent": "以研究视角解释稳定币支付、跨境结算和互联网基础设施采购。"
+  },
+  {
+    "id": "dns-security-governance",
+    "name": "DNS安全与域名治理",
+    "section": "research",
+    "pillar": "/research/dns-security-governance/",
+    "tool": "/tools/dnssec-check-guide/",
+    "report": "/reports/2026-dns-security-governance-report/",
+    "glossary": ["/glossary/dns/", "/glossary/dnssec/"],
+    "intent": "把站点从支付教程扩展到互联网基础设施、安全和治理研究。"
+  }
+]

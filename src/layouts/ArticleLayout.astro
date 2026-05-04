@@ -1,0 +1,93 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import TableOfContents from "@/components/TableOfContents.astro";
+import InternalLinks from "@/components/InternalLinks.astro";
+import RiskDisclosure from "@/components/RiskDisclosure.astro";
+import FAQBlock from "@/components/FAQBlock.astro";
+import RelatedArticles from "@/components/RelatedArticles.astro";
+import AuthorBox from "@/components/AuthorBox.astro";
+import SchemaArticle from "@/components/SchemaArticle.astro";
+import SchemaBreadcrumb from "@/components/SchemaBreadcrumb.astro";
+import SchemaFAQ from "@/components/SchemaFAQ.astro";
+import SchemaCourse from "@/components/SchemaCourse.astro";
+import SchemaDataset from "@/components/SchemaDataset.astro";
+import SchemaDefinedTerm from "@/components/SchemaDefinedTerm.astro";
+import SchemaCreativeWork from "@/components/SchemaCreativeWork.astro";
+import { buildBreadcrumbs } from "@/lib/breadcrumbs";
+import { entryPath, formatDate } from "@/lib/content";
+
+interface Props {
+  entry: any;
+  headings?: { depth: number; slug: string; text: string }[];
+  variant?: "article" | "research" | "report" | "tool" | "glossary" | "course";
+}
+
+const { entry, headings = [], variant = "article" } = Astro.props;
+const data = entry.data;
+const slug = data.slug ?? entry.slug;
+const path = entryPath(entry);
+const breadcrumbs = buildBreadcrumbs(data.section, slug, data.title);
+const noindex = data.index === false;
+const schemaType = data.schemaType;
+---
+
+<BaseLayout title={data.title} description={data.description} path={path} noindex={noindex} type="article">
+  <Fragment slot="head">
+    <SchemaBreadcrumb items={breadcrumbs} />
+    {schemaType === "Course" ? (
+      <SchemaCourse title={data.title} description={data.description} path={path} />
+    ) : schemaType === "Dataset" ? (
+      <SchemaDataset title={data.title} description={data.description} path={path} updatedAt={data.updatedAt} />
+    ) : schemaType === "DefinedTerm" ? (
+      <SchemaDefinedTerm title={data.title} description={data.description} path={path} />
+    ) : schemaType === "CreativeWork" ? (
+      <SchemaCreativeWork
+        title={data.title}
+        description={data.description}
+        path={path}
+        publishedAt={data.publishedAt}
+        updatedAt={data.updatedAt}
+      />
+    ) : (
+      <SchemaArticle
+        title={data.title}
+        description={data.description}
+        path={path}
+        publishedAt={data.publishedAt}
+        updatedAt={data.updatedAt}
+        author={data.author}
+      />
+    )}
+    <SchemaFAQ faqs={data.faqs} />
+  </Fragment>
+
+  <Breadcrumbs items={breadcrumbs} />
+
+  <header class={`article-hero article-hero-${variant}`}>
+    <p class="eyebrow">{data.type} / {data.cluster ?? data.section}</p>
+    <h1>{data.title}</h1>
+    <p class="lede">{data.description}</p>
+    <div class="article-meta">
+      <span>发布日期：{formatDate(data.publishedAt)}</span>
+      <span>最后更新：{formatDate(data.updatedAt)}</span>
+      <span>作者：{data.author}</span>
+      {data.reviewer && <span>审稿：{data.reviewer}</span>}
+      <span>风险级别：{data.riskLevel}</span>
+    </div>
+  </header>
+
+  <div class="article-grid">
+    <aside class="article-aside">
+      <TableOfContents headings={headings} />
+      <InternalLinks links={data.related} />
+    </aside>
+    <article class="prose">
+      <slot />
+      <RiskDisclosure riskLevel={data.riskLevel} />
+      <FAQBlock faqs={data.faqs} />
+      <RelatedArticles related={data.related} />
+      <AuthorBox author={data.author} reviewer={data.reviewer} />
+    </article>
+  </div>
+</BaseLayout>
