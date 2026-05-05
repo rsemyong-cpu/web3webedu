@@ -46,10 +46,10 @@ related:
     url: "/en/research/dns-security-governance/"
   - title: "Why DNSSEC Matters"
     url: "/en/research/dns-security-governance/dnssec/"
-  - title: "DNS Glossary"
-    url: "/en/glossary/whois/"
-  - title: "DNSSEC Check Guide"
-    url: "/en/tools/whois-rdap-guide/"
+  - title: "DNSSEC Deployment Research"
+    url: "/en/research/dns-security-governance/dnssec/"
+  - title: "Private Domain Registration Guide"
+    url: "/en/library/private-domain-registration/"
   - title: "USDT Domain Report"
     url: "/en/reports/2026-usdt-domain-report/"
 updateCadence: "quarterly"
@@ -88,6 +88,6 @@ Quarterly dataset updates, monthly core reference checks, and news observations 
 
 - [DNS Security and Governance Guide](/en/research/dns-security-governance/)
 - [Why DNSSEC Matters](/en/research/dns-security-governance/dnssec/)
-- [DNS Glossary](/en/glossary/whois/)
-- [DNSSEC Check Guide](/en/tools/whois-rdap-guide/)
+- [DNSSEC Deployment Research](/en/research/dns-security-governance/dnssec/)
+- [Private Domain Registration Guide](/en/library/private-domain-registration/)
 - [USDT Domain Report](/en/reports/2026-usdt-domain-report/)
