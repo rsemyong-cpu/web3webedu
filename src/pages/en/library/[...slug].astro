@@ -1,0 +1,26 @@
+---
+import { getCollection, render } from "astro:content";
+import ArticleLayout from "@/layouts/ArticleLayout.astro";
+import CaseStudyLayout from "@/layouts/CaseStudyLayout.astro";
+import TutorialLayout from "@/layouts/TutorialLayout.astro";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("en-library", ({ data }) => data.index !== false);
+  return entries.map((entry) => ({ params: { slug: entry.data.slug ?? entry.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content, headings } = await render(entry);
+const type = entry.data.type;
+const Layout = type === "case-study" ? CaseStudyLayout : type === "tutorial" ? TutorialLayout : ArticleLayout;
+---
+
+{type === "case-study" || type === "tutorial" ? (
+  <Layout entry={entry} headings={headings}>
+    <Content />
+  </Layout>
+) : (
+  <ArticleLayout entry={entry} headings={headings}>
+    <Content />
+  </ArticleLayout>
+)}

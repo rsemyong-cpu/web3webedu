@@ -18,13 +18,27 @@ export const contentGlobs = [
   "src/content/faq/**/*.md",
   "src/content/news/**/*.md",
   "src/content/courses/**/*.md",
-  "src/content/pages/**/*.md"
+  "src/content/pages/**/*.md",
+  "src/content/en-library/**/*.md",
+  "src/content/en-research/**/*.md",
+  "src/content/en-reports/**/*.md",
+  "src/content/en-tools/**/*.md",
+  "src/content/en-glossary/**/*.md",
+  "src/content/en-faq/**/*.md",
+  "src/content/en-news/**/*.md",
+  "src/content/en-courses/**/*.md",
+  "src/content/en-pages/**/*.md"
 ];
 
-export function contentUrl(data: Record<string, any>) {
+function isEnContent(file: string) {
+  return file.includes("/en-");
+}
+
+export function contentUrl(data: Record<string, any>, file?: string) {
   if (data.canonical) return data.canonical;
-  if (data.section === "about" || data.section === "legal") return `/${data.slug}/`;
-  return `/${data.section}/${data.slug}/`;
+  const prefix = file && isEnContent(file) ? "/en" : "";
+  if (data.section === "about" || data.section === "legal") return `${prefix}/${data.slug}/`;
+  return `${prefix}/${data.section}/${data.slug}/`;
 }
 
 export async function readContentFiles() {
@@ -38,7 +52,7 @@ export async function readContentFiles() {
       file,
       data: parsed.data,
       content: parsed.content,
-      url: contentUrl(parsed.data)
+      url: contentUrl(parsed.data, file)
     });
   }
 

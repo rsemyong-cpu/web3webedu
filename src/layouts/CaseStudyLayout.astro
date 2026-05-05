@@ -1,0 +1,8 @@
+---
+import ArticleLayout from "./ArticleLayout.astro";
+const { entry, headings = [] } = Astro.props;
+---
+
+<ArticleLayout entry={entry} headings={headings} variant="case-study">
+<slot />
+</ArticleLayout>

@@ -1,0 +1,10 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import CollectionIndexEn from "@/components/CollectionIndexEn.astro";
+import { getSectionEntriesEn } from "@/lib/content";
+const entries = await getSectionEntriesEn("learn");
+---
+
+<BaseLayout title="Courses" description="Systematic course entries covering domains, DNS, USDT, Web3 domains, privacy protection, and stablecoin payment infrastructure." path="/en/learn/">
+  <CollectionIndexEn title="Courses" description="Course pages serve introductory learning paths — not just another article section." entries={entries} eyebrow="Learn" />
+</BaseLayout>

@@ -1,0 +1,10 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import CollectionIndexEn from "@/components/CollectionIndexEn.astro";
+import { getSectionEntriesEn } from "@/lib/content";
+const entries = await getSectionEntriesEn("research");
+---
+
+<BaseLayout title="Research Center" description="Researching USDT domain payments, privacy domain registration, Web3 domain identity, stablecoin economics, DNS security, and domain governance." path="/en/research/">
+  <CollectionIndexEn title="Research Center" description="Each research direction has core questions, introductory reading, in-depth reports, case studies, data observations, FAQs, and related terms." entries={entries} eyebrow="Research" />
+</BaseLayout>

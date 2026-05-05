@@ -1,0 +1,28 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import { formatDateEn } from "@/lib/content";
+
+const authors = await getCollection("authors", ({ data }) => data.index !== false);
+---
+
+<BaseLayout title="Authors & Editorial Team" description="Listing the editorial team, research authors, contribution areas, and conflict-of-interest disclosures at the Web3 Domain Institute." path="/en/people/">
+  <header class="index-hero">
+    <p class="eyebrow">People</p>
+    <h1>Authors & Editorial Team</h1>
+    <p>No fabricated professors, degrees, or institutional credentials. Author pages only show research directions, roles, disclosure statements, and content lists.</p>
+  </header>
+  <section class="section">
+    <div class="entry-grid">
+      {authors.map((author) => (
+        <a class="entry-link" href={`/en/people/${author.data.slug ?? author.slug}/`}>
+          <span>
+            <strong>{author.data.name}</strong>
+            <p>{author.data.description}</p>
+          </span>
+          <span class="meta-line">{author.data.role} / Updated: {formatDateEn(author.data.updatedAt)}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

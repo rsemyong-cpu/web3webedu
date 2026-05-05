@@ -2,15 +2,22 @@
 interface Props {
   author: string;
   reviewer?: string;
+  locale?: "zh-CN" | "en";
 }
 
-const { author, reviewer } = Astro.props;
+const { author, reviewer, locale = "zh-CN" } = Astro.props;
+const isEn = locale === "en";
+const ariaLabel = isEn ? "Author information" : "作者信息";
+const body = isEn
+  ? "The editorial team maintains pages through a research-content workflow, checking definitions, risk boundaries, internal link structure, source references, and update timestamps."
+  : "编辑团队按研究型内容流程维护页面，重点检查定义、风险边界、内链结构、资料来源与更新时间。";
+const reviewerPrefix = isEn ? " Reviewer: " : " 审稿：";
 ---
 
-<section class="author-box" aria-label="作者信息">
+<section class="author-box" aria-label={ariaLabel}>
   <strong>{author}</strong>
   <p>
-    编辑团队按研究型内容流程维护页面，重点检查定义、风险边界、内链结构、资料来源与更新时间。
-    {reviewer && <> 审稿：{reviewer}。</>}
+    {body}
+    {reviewer && <>{reviewerPrefix}{reviewer}.</>}
   </p>
 </section>

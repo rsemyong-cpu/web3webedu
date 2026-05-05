@@ -7,6 +7,13 @@ const site = process.env.SITE_URL ?? "https://web3-domain-institute.edu.pl";
 export default defineConfig({
   site,
   output: "static",
+  i18n: {
+    defaultLocale: "zh-CN",
+    locales: ["zh-CN", "en"],
+    routing: {
+      prefixDefaultLocale: false
+    }
+  },
   integrations: [
     mdx(),
     sitemap({
@@ -15,7 +22,14 @@ export default defineConfig({
         !page.includes("/login/") &&
         !page.includes("/search/") &&
         !page.includes("/preview/") &&
-        !page.includes("/drafts/")
+        !page.includes("/drafts/"),
+      i18n: {
+        defaultLocale: "zh-CN",
+        locales: {
+          "zh-CN": "zh-CN",
+          en: "en"
+        }
+      }
     })
   ],
   markdown: {

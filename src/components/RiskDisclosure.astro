@@ -1,15 +1,22 @@
 ---
 interface Props {
   riskLevel?: "low" | "medium" | "high";
+  locale?: "zh-CN" | "en";
 }
 
-const { riskLevel = "medium" } = Astro.props;
-const label = riskLevel === "high" ? "高风险主题" : riskLevel === "low" ? "低风险主题" : "中等风险主题";
+const { riskLevel = "medium", locale = "zh-CN" } = Astro.props;
+const isEn = locale === "en";
+const label = isEn
+  ? riskLevel === "high" ? "High-risk topic" : riskLevel === "low" ? "Low-risk topic" : "Medium-risk topic"
+  : riskLevel === "high" ? "高风险主题" : riskLevel === "low" ? "低风险主题" : "中等风险主题";
+const ariaLabel = isEn ? "Risk disclosure" : "风险提示";
+const prefix = isEn ? "Risk Disclosure: " : "风险提示：";
+const body = isEn
+  ? "This site's content is for educational research and reference only — not financial, legal, tax, or investment advice. For crypto payments, domain registration, privacy protection, or cross-border services, consult registrar policies, applicable laws, on-chain payment rules, and professional advice."
+  : "本站内容用于教育研究与资料整理，不构成金融、法律、税务或投资建议。涉及加密支付、域名注册、隐私保护或跨境服务时，应以注册商政策、适用法律、链上支付规则和专业意见为准。";
 ---
 
-<aside class="notice" aria-label="风险提示">
-  <strong>风险提示：{label}</strong>
-  <p>
-    本站内容用于教育研究与资料整理，不构成金融、法律、税务或投资建议。涉及加密支付、域名注册、隐私保护或跨境服务时，应以注册商政策、适用法律、链上支付规则和专业意见为准。
-  </p>
+<aside class="notice" aria-label={ariaLabel}>
+  <strong>{prefix}{label}</strong>
+  <p>{body}</p>
 </aside>

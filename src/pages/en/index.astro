@@ -1,0 +1,84 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import { SITE } from "@/lib/site";
+
+const libraryEntries = await getCollection("en-library", ({ data }) => data.index !== false);
+const researchEntries = await getCollection("en-research", ({ data }) => data.index !== false);
+const faqEntries = await getCollection("en-faq", ({ data }) => data.index !== false);
+const latest = [...libraryEntries, ...researchEntries]
+  .sort((a, b) => b.data.updatedAt.valueOf() - a.data.updatedAt.valueOf())
+  .slice(0, 6);
+---
+
+<BaseLayout title={SITE.enName} description={SITE.enDescription} path="/en/">
+  <section class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Web3 Domain Institute</p>
+      <h1>Web3 Domain & Stablecoin Institute</h1>
+      <p class="hero-copy">
+        Researching encrypted payments and domain infrastructure, understanding digital identity gateways in the Web3 era. Covering USDT domain purchases, privacy domain registration, Web3 domains, DNS security, and stablecoin economics.
+      </p>
+      <div class="hero-actions">
+        <a class="button primary" href="/en/library/buy-domain-with-usdt/">USDT Domain Purchase Guide</a>
+        <a class="button light" href="/en/research/">View Research Center</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Core Research Areas</h2>
+      <p>Topic clusters organized around pillar pages, supporting tools, reports, and structured data.</p>
+    </div>
+    <div class="cluster-grid">
+      {libraryEntries.map((entry) => (
+        <a class="cluster-link" href={`/en/library/${entry.data.slug ?? entry.slug}/`}>
+          <span>
+            <strong>{entry.data.title}</strong>
+            <p>{entry.data.description}</p>
+          </span>
+          <span class="meta-line">{entry.data.section} / pillar page</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="section">
+      <div class="section-header">
+        <h2>Latest Research & Resources</h2>
+        <p>Content authored in Markdown, auto-generating sitemap, RSS, structured data, and internal link modules.</p>
+      </div>
+      <div class="entry-grid">
+        {latest.map((entry) => (
+          <a class="entry-link" href={`/en/${entry.data.section}/${entry.data.slug ?? entry.slug}/`}>
+            <span>
+              <strong>{entry.data.title}</strong>
+              <p>{entry.data.description}</p>
+            </span>
+            <span class="meta-line">Updated: {entry.data.updatedAt.toLocaleDateString("en-US")}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Frequently Asked Questions</h2>
+      <p>Structured FAQ pages with schema markup for AI search visibility and rich results.</p>
+    </div>
+    <div class="entry-grid">
+      {faqEntries.slice(0, 3).map((entry) => (
+        <a class="entry-link" href={`/en/faq/${entry.data.slug ?? entry.slug}/`}>
+          <span>
+            <strong>{entry.data.title}</strong>
+            <p>{entry.data.description}</p>
+          </span>
+          <span class="meta-line">{entry.data.schemaType}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

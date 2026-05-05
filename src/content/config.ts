@@ -105,5 +105,14 @@ export const collections = {
   news: defineCollection({ type: "content", schema: commonContentSchema }),
   courses: defineCollection({ type: "content", schema: commonContentSchema }),
   pages: defineCollection({ type: "content", schema: commonContentSchema }),
-  authors: defineCollection({ type: "content", schema: authorSchema })
+  authors: defineCollection({ type: "content", schema: authorSchema }),
+  "en-library": defineCollection({ type: "content", schema: commonContentSchema }),
+  "en-research": defineCollection({ type: "content", schema: commonContentSchema }),
+  "en-reports": defineCollection({ type: "content", schema: commonContentSchema }),
+  "en-tools": defineCollection({ type: "content", schema: commonContentSchema }),
+  "en-glossary": defineCollection({ type: "content", schema: commonContentSchema }),
+  "en-faq": defineCollection({ type: "content", schema: commonContentSchema }),
+  "en-news": defineCollection({ type: "content", schema: commonContentSchema }),
+  "en-courses": defineCollection({ type: "content", schema: commonContentSchema }),
+  "en-pages": defineCollection({ type: "content", schema: commonContentSchema })
 };

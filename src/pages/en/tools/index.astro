@@ -1,0 +1,10 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import CollectionIndexEn from "@/components/CollectionIndexEn.astro";
+import { getSectionEntriesEn } from "@/lib/content";
+const entries = await getSectionEntriesEn("tools");
+---
+
+<BaseLayout title="Tools & Data" description="Registrar crypto-payment comparison, USDT domain risk checklist, domain privacy checklist, WHOIS/RDAP guide, and DNSSEC guide." path="/en/tools/">
+  <CollectionIndexEn title="Tools & Data" description="Tool pages use tables, checklists, update dates, and risk ratings to support practical search and AI search summaries." entries={entries} eyebrow="Tools" />
+</BaseLayout>

@@ -6,14 +6,16 @@ interface RelatedItem {
 
 interface Props {
   related: RelatedItem[];
+  locale?: "zh-CN" | "en";
 }
 
-const { related } = Astro.props;
+const { related, locale = "zh-CN" } = Astro.props;
+const heading = locale === "en" ? "Related Reading" : "相关阅读";
 ---
 
 {related.length > 0 && (
   <section class="related-block" aria-labelledby="related-title">
-    <h2 id="related-title">相关阅读</h2>
+    <h2 id="related-title">{heading}</h2>
     <div class="related-list">
       {related.map((item) => (
         <a href={item.url}>

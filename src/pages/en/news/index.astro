@@ -1,0 +1,10 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import CollectionIndexEn from "@/components/CollectionIndexEn.astro";
+import { getSectionEntriesEn } from "@/lib/content";
+const entries = await getSectionEntriesEn("news");
+---
+
+<BaseLayout title="News Watch" description="Tracking crypto payments, domain industry, Web3 domains, stablecoin regulation, and registrar policy changes." path="/en/news/">
+  <CollectionIndexEn title="News Watch" description="News pages capture fresh content; research and pillar pages update on a monthly or quarterly cycle." entries={entries} eyebrow="News" />
+</BaseLayout>

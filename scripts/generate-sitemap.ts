@@ -11,7 +11,16 @@ const staticPages = [
   "/news/",
   "/glossary/",
   "/faq/",
-  "/people/"
+  "/people/",
+  "/en/",
+  "/en/learn/",
+  "/en/research/",
+  "/en/library/",
+  "/en/reports/",
+  "/en/tools/",
+  "/en/news/",
+  "/en/glossary/",
+  "/en/faq/"
 ];
 
 const groups: Record<string, { url: string; updatedAt: string }[]> = {

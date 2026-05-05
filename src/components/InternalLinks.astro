@@ -6,14 +6,17 @@ interface RelatedItem {
 
 interface Props {
   links: RelatedItem[];
+  locale?: "zh-CN" | "en";
 }
 
-const { links } = Astro.props;
+const { links, locale = "zh-CN" } = Astro.props;
+const ariaLabel = locale === "en" ? "Topic links" : "主题内链";
+const heading = locale === "en" ? "Topic Links" : "主题路径";
 ---
 
 {links.length > 0 && (
-  <nav class="internal-links" aria-label="主题内链">
-    <strong>主题路径</strong>
+  <nav class="internal-links" aria-label={ariaLabel}>
+    <strong>{heading}</strong>
     {links.slice(0, 8).map((item) => <a href={item.url}>{item.title}</a>)}
   </nav>
 )}

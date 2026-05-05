@@ -1,0 +1,10 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import CollectionIndexEn from "@/components/CollectionIndexEn.astro";
+import { getSectionEntriesEn } from "@/lib/content";
+const entries = await getSectionEntriesEn("faq");
+---
+
+<BaseLayout title="FAQ Center" description="Direct Q&A covering USDT domain purchases, privacy registration, Web3 domains, DNS security, and stablecoin economics for AI search visibility." path="/en/faq/">
+  <CollectionIndexEn title="FAQ Center" description="FAQ pages answer questions directly at the top, retaining risk boundaries, update dates, author info, and references." entries={entries} eyebrow="FAQ" />
+</BaseLayout>

@@ -3,12 +3,14 @@ import type { BreadcrumbItem } from "@/lib/breadcrumbs";
 
 interface Props {
   items: BreadcrumbItem[];
+  locale?: "zh-CN" | "en";
 }
 
-const { items } = Astro.props;
+const { items, locale = "zh-CN" } = Astro.props;
+const ariaLabel = locale === "en" ? "Breadcrumbs" : "面包屑";
 ---
 
-<nav class="breadcrumbs" aria-label="面包屑">
+<nav class="breadcrumbs" aria-label={ariaLabel}>
   <ol>
     {items.map((item) => <li><a href={item.href}>{item.label}</a></li>)}
   </ol>

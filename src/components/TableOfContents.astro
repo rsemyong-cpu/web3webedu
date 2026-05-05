@@ -7,15 +7,18 @@ interface Heading {
 
 interface Props {
   headings: Heading[];
+  locale?: "zh-CN" | "en";
 }
 
-const { headings } = Astro.props;
+const { headings, locale = "zh-CN" } = Astro.props;
 const toc = headings.filter((heading) => heading.depth === 2 || heading.depth === 3).slice(0, 12);
+const label = locale === "en" ? "Table of Contents" : "目录";
+const ariaLabel = locale === "en" ? "Table of contents" : "目录";
 ---
 
 {toc.length > 0 && (
-  <nav class="toc" aria-label="目录">
-    <strong>目录</strong>
+  <nav class="toc" aria-label={ariaLabel}>
+    <strong>{label}</strong>
     {toc.map((heading) => (
       <a href={`#${heading.slug}`} style={`padding-left:${heading.depth === 3 ? "0.9rem" : "0"}`}>
         {heading.text}

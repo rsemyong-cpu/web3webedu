@@ -6,14 +6,16 @@ interface FAQ {
 
 interface Props {
   faqs: FAQ[];
+  locale?: "zh-CN" | "en";
 }
 
-const { faqs } = Astro.props;
+const { faqs, locale = "zh-CN" } = Astro.props;
+const heading = locale === "en" ? "Frequently Asked Questions" : "常见问题";
 ---
 
 {faqs.length > 0 && (
   <section class="faq-block" aria-labelledby="faq-title">
-    <h2 id="faq-title">常见问题</h2>
+    <h2 id="faq-title">{heading}</h2>
     {faqs.map((faq) => (
       <details>
         <summary>{faq.question}</summary>

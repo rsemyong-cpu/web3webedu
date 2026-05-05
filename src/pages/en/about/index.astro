@@ -1,0 +1,10 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import CollectionIndexEn from "@/components/CollectionIndexEn.astro";
+import { getSectionEntriesEn } from "@/lib/content";
+const entries = await getSectionEntriesEn("about");
+---
+
+<BaseLayout title="About" description="Positioning, research directions, content systems, and editorial boundaries of the Web3 Domain & Stablecoin Institute." path="/en/about/">
+  <CollectionIndexEn title="About" description="Institute positioning, research scope, editorial policy, and compliance boundaries." entries={entries} eyebrow="About" />
+</BaseLayout>

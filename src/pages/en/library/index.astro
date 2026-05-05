@@ -1,0 +1,10 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import CollectionIndexEn from "@/components/CollectionIndexEn.astro";
+import { getSectionEntriesEn } from "@/lib/content";
+const entries = await getSectionEntriesEn("library");
+---
+
+<BaseLayout title="Library" description="Topic clusters built around USDT domain purchases, cryptocurrency domain registration, privacy domain registration, Web3 domains, and DNS security." path="/en/library/">
+  <CollectionIndexEn title="Library" description="Pillar pages and long-tail answers — every article includes a summary, risk disclosure, FAQ, related terms, tool entry point, and report entry point." entries={entries} eyebrow="Library" />
+</BaseLayout>

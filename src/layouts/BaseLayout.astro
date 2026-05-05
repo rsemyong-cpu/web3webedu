@@ -2,8 +2,8 @@
 import "@/styles/global.css";
 import SEO from "@/components/SEO.astro";
 import SchemaOrganization from "@/components/SchemaOrganization.astro";
-import { primaryNavigation, footerNavigation } from "@/data/navigation";
-import { SITE } from "@/lib/site";
+import { primaryNavigation, footerNavigation, enPrimaryNavigation, enFooterNavigation } from "@/data/navigation";
+import { SITE, localeFromPath, altLangPath, localeName } from "@/lib/site";
 
 interface Props {
   title: string;
@@ -15,46 +15,59 @@ interface Props {
 }
 
 const { title, description, path, image, noindex, type } = Astro.props;
+const currentPath = path ?? Astro.url.pathname;
+const locale = localeFromPath(currentPath);
+const isEn = locale === "en";
+const htmlLang = isEn ? "en" : "zh-CN";
+const siteName = isEn ? SITE.enName : SITE.zhName;
+const nav = isEn ? enPrimaryNavigation : primaryNavigation;
+const fnav = isEn ? enFooterNavigation : footerNavigation;
+const altPath = altLangPath(currentPath);
 ---
 
 <!doctype html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content={Astro.generator} />
-    <SEO title={title} description={description} path={path} image={image} noindex={noindex} type={type} />
-    <SchemaOrganization />
-    <slot name="head" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main">跳到正文</a>
-    <header class="site-header">
-      <div class="nav-shell">
-        <a class="brand" href="/" aria-label={SITE.zhName}>
-          <span class="brand-mark" aria-hidden="true"></span>
-          <span>{SITE.name}</span>
-        </a>
-        <nav class="primary-nav" aria-label="主导航">
-          {primaryNavigation.map((item) => <a href={item.href}>{item.label}</a>)}
-        </nav>
+<html lang={htmlLang}>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content={Astro.generator} />
+  <SEO title={title} description={description} path={currentPath} image={image} noindex={noindex} type={type} locale={locale} altPath={altPath} />
+  <SchemaOrganization />
+  <slot name="head" />
+</head>
+<body>
+  <a class="skip-link" href="#main">{isEn ? "Skip to content" : "跳到正文"}</a>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href={isEn ? "/en/" : "/"} aria-label={siteName}>
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>{SITE.name}</span>
+      </a>
+      <nav class="primary-nav" aria-label={isEn ? "Primary navigation" : "主导航"}>
+        {nav.map((item) => <a href={item.href}>{item.label}</a>)}
+      </nav>
+      <a class="lang-switch" href={altPath} hreflang={isEn ? "zh-CN" : "en"} rel="alternate">
+        {localeName(isEn ? "zh-CN" : "en" as any)}
+      </a>
+    </div>
+  </header>
+  <main id="main" class="site-main">
+    <slot />
+  </main>
+  <footer class="site-footer">
+    <div class="footer-shell">
+      <div>
+        <strong>{siteName}</strong>
+        <p>
+          {isEn
+            ? "Researching encrypted payments and domain infrastructure, understanding digital identity gateways in the Web3 era. This site does not provide investment advice, illegal anonymity services, or regulatory evasion guidance."
+            : "研究加密支付与域名基础设施，理解 Web3 时代的数字身份入口。本站不提供投资建议、违法匿名服务或规避监管指导。"}
+        </p>
       </div>
-    </header>
-    <main id="main" class="site-main">
-      <slot />
-    </main>
-    <footer class="site-footer">
-      <div class="footer-shell">
-        <div>
-          <strong>{SITE.zhName}</strong>
-          <p>
-            研究加密支付与域名基础设施，理解 Web3 时代的数字身份入口。本站不提供投资建议、违法匿名服务或规避监管指导。
-          </p>
-        </div>
-        <nav class="footer-links" aria-label="页脚导航">
-          {footerNavigation.map((item) => <a href={item.href}>{item.label}</a>)}
-        </nav>
-      </div>
-    </footer>
-  </body>
+      <nav class="footer-links" aria-label={isEn ? "Footer navigation" : "页脚导航"}>
+        {fnav.map((item) => <a href={item.href}>{item.label}</a>)}
+      </nav>
+    </div>
+  </footer>
+</body>
 </html>

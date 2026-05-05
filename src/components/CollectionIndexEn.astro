@@ -1,0 +1,60 @@
+---
+import { entryPath, formatDateEn } from "@/lib/content";
+
+interface Props {
+  title: string;
+  description: string;
+  entries: any[];
+  eyebrow?: string;
+}
+
+const { title, description, entries, eyebrow = "Index" } = Astro.props;
+const featured = entries.slice(0, 3);
+const rest = entries.slice(3);
+---
+
+<header class="index-hero">
+  <p class="eyebrow">{eyebrow}</p>
+  <h1>{title}</h1>
+  <p>{description}</p>
+</header>
+
+{featured.length > 0 && (
+  <section class="section">
+    <div class="section-header">
+      <h2>Featured</h2>
+      <p>Start from pillar pages, tools, and reports, then explore long-tail questions within each topic cluster.</p>
+    </div>
+    <div class="entry-grid">
+      {featured.map((entry) => (
+        <a class="entry-link" href={entryPath(entry)}>
+          <span>
+            <strong>{entry.data.title}</strong>
+            <p>{entry.data.description}</p>
+          </span>
+          <span class="meta-line">Updated: {formatDateEn(entry.data.updatedAt)}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+)}
+
+{rest.length > 0 && (
+  <section class="section">
+    <div class="section-header">
+      <h2>All Content</h2>
+      <p>All URLs use lowercase English with hyphens for long-term indexing, citation, and automated maintenance.</p>
+    </div>
+    <div class="entry-grid">
+      {rest.map((entry) => (
+        <a class="entry-link" href={entryPath(entry)}>
+          <span>
+            <strong>{entry.data.title}</strong>
+            <p>{entry.data.description}</p>
+          </span>
+          <span class="meta-line">{entry.data.type} / {entry.data.cluster ?? entry.data.section}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+)}

@@ -21,19 +21,44 @@ const labels: Record<string, string> = {
   "cross-border-domain-compliance": "跨境域名合规"
 };
 
+const enLabels: Record<string, string> = {
+  learn: "Courses",
+  research: "Research",
+  library: "Library",
+  reports: "Reports",
+  tools: "Tools",
+  news: "News",
+  glossary: "Glossary",
+  faq: "FAQ",
+  about: "About",
+  legal: "Legal",
+  people: "People",
+  "buy-domain-with-usdt": "Buy Domain with USDT",
+  "buy-domain-with-crypto": "Buy Domain with Crypto",
+  "private-domain-registration": "Private Domain Registration",
+  "web3-domain-identity": "Web3 Domain & Identity",
+  "stablecoin-economy": "Stablecoin Economy",
+  "dns-security-governance": "DNS Security & Governance",
+  "cbdc-domain-infrastructure": "CBDC & Domain Infrastructure",
+  "nft-domain-market": "NFT Domain Market",
+  "cross-border-domain-compliance": "Cross-Border Domain Compliance"
+};
+
 export type BreadcrumbItem = {
   label: string;
   href: string;
 };
 
-export function titleFromSegment(segment: string) {
-  return labels[segment] ?? segment.replaceAll("-", " ");
+export function titleFromSegment(segment: string, isEn = false) {
+  const map = isEn ? enLabels : labels;
+  return map[segment] ?? segment.replaceAll("-", " ");
 }
 
-export function buildBreadcrumbs(section: string, slug: string, title: string) {
-  const items: BreadcrumbItem[] = [{ label: "首页", href: "/" }];
-  const sectionHref = section === "about" || section === "legal" ? `/${section}/` : `/${section}/`;
-  items.push({ label: titleFromSegment(section), href: sectionHref });
+export function buildBreadcrumbs(section: string, slug: string, title: string, isEn = false) {
+  const prefix = isEn ? "/en" : "";
+  const items: BreadcrumbItem[] = [{ label: isEn ? "Home" : "首页", href: `${prefix}/` }];
+  const sectionHref = section === "about" || section === "legal" ? `${prefix}/${section}/` : `${prefix}/${section}/`;
+  items.push({ label: titleFromSegment(section, isEn), href: sectionHref });
 
   const parts = slug.split("/").filter(Boolean);
   if (parts[0] === section) parts.shift();
@@ -41,12 +66,12 @@ export function buildBreadcrumbs(section: string, slug: string, title: string) {
     items[items.length - 1] = { label: title, href: sectionHref };
     return items;
   }
-  let href = `/${section}/`;
+  let href = `${prefix}/${section}/`;
   parts.forEach((part, index) => {
     href += `${part}/`;
     const isLast = index === parts.length - 1;
     items.push({
-      label: isLast ? title : titleFromSegment(part),
+      label: isLast ? title : titleFromSegment(part, isEn),
       href
     });
   });

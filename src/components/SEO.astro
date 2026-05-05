@@ -8,6 +8,8 @@ interface Props {
   image?: string;
   noindex?: boolean;
   type?: string;
+  locale?: "zh-CN" | "en";
+  altPath?: string;
 }
 
 const {
@@ -16,12 +18,15 @@ const {
   path = Astro.url.pathname,
   image = SITE.defaultImage,
   noindex = false,
-  type = "website"
+  type = "website",
+  locale = "zh-CN",
+  altPath
 } = Astro.props;
 
 const fullTitle = title.includes(SITE.name) ? title : `${title} | ${SITE.name}`;
 const canonical = absoluteUrl(path, Astro.site);
 const imageUrl = image.startsWith("http") ? image : absoluteUrl(image, Astro.site);
+const altCanonical = altPath ? absoluteUrl(altPath, Astro.site) : undefined;
 ---
 
 <title>{fullTitle}</title>
@@ -33,7 +38,16 @@ const imageUrl = image.startsWith("http") ? image : absoluteUrl(image, Astro.sit
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />
 <meta property="og:image" content={imageUrl} />
+<meta property="og:locale" content={locale === "en" ? "en_US" : "zh_CN"} />
+<meta property="og:locale:alternate" content={locale === "en" ? "zh_CN" : "en_US"} />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={fullTitle} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={imageUrl} />
+{altCanonical && (
+  <link rel="alternate" hreflang={locale === "en" ? "zh-CN" : "en"} href={altCanonical} />
+)}
+{altCanonical && (
+  <link rel="alternate" hreflang={locale === "en" ? "en" : "zh-CN"} href={canonical} />
+)}
+<link rel="alternate" hreflang="x-default" href={locale === "en" && altCanonical ? altCanonical : canonical} />

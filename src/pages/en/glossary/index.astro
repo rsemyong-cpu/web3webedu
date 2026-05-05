@@ -1,0 +1,10 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import CollectionIndexEn from "@/components/CollectionIndexEn.astro";
+import { getSectionEntriesEn } from "@/lib/content";
+const entries = await getSectionEntriesEn("glossary");
+---
+
+<BaseLayout title="Glossary" description="Definitions for USDT, domains, DNS, WHOIS, RDAP, DNSSEC, Web3 domains, stablecoins, and other foundational concepts." path="/en/glossary/">
+  <CollectionIndexEn title="Glossary" description="Glossary pages capture definition-type searches and provide stable internal links for articles, tools, and reports." entries={entries} eyebrow="Glossary" />
+</BaseLayout>

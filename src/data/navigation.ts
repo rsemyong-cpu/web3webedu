@@ -18,3 +18,24 @@ export const footerNavigation = [
   { label: "RSS", href: "/rss.xml" },
   { label: "Sitemap", href: "/sitemap.xml" }
 ];
+
+export const enPrimaryNavigation = [
+  { label: "Home", href: "/en/" },
+  { label: "Courses", href: "/en/learn/" },
+  { label: "Research", href: "/en/research/" },
+  { label: "Library", href: "/en/library/" },
+  { label: "Reports", href: "/en/reports/" },
+  { label: "Tools", href: "/en/tools/" },
+  { label: "News", href: "/en/news/" },
+  { label: "About", href: "/en/about/" }
+];
+
+export const enFooterNavigation = [
+  { label: "Editorial Policy", href: "/en/about/editorial-policy/" },
+  { label: "Disclaimer", href: "/en/about/disclaimer/" },
+  { label: "Authors", href: "/en/people/" },
+  { label: "Contribute", href: "/en/about/contribute/" },
+  { label: "Risk Disclosure", href: "/en/legal/risk-disclosure/" },
+  { label: "RSS", href: "/rss.xml" },
+  { label: "Sitemap", href: "/sitemap.xml" }
+];

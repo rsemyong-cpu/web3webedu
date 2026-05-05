@@ -10,17 +10,17 @@
 | 项 | 值 |
 |---|---|
 | 框架 | Astro 5.x 静态站点生成（SSG） |
-| 内容 | Markdown + YAML frontmatter，80+ 页面 |
+| 内容 | Markdown + YAML frontmatter，150+ 页面 |
 | 语言 | 正文中文（zh-CN），URL/术语英文，保留英文标准术语不翻译 |
-| 构建 | `npm run build` = validate → RSS → sitemap → astro build → 92页 |
+| 构建 | `npm run build` = validate → RSS → sitemap → astro build → 150页 |
 | 部署 | GitHub Pages（`.github/workflows/generative-static-site.yml`） |
 | 自动化 | 每日 UTC 02:17 触发内容生成 + 构建部署 |
 
 ### 目录结构
 
 ```
-src/content/          # Markdown 内容集合（9个collection + authors）
-  library/            # 知识库（pillar + longtail）
+src/content/              # Markdown 内容集合（9个中文collection + 9个英文collection）
+  library/                # 知识库（pillar + longtail）
   research/           # 研究（pillar + longtail）
   faq/                # FAQ
   courses/            # 课程（基础 + 进阶）
@@ -30,19 +30,30 @@ src/content/          # Markdown 内容集合（9个collection + authors）
   news/               # 新闻简报
   pages/              # 关于/法律页面
   authors/            # 作者档案
-src/data/             # JSON 数据文件
-  topic-clusters.json # 6个主题集群定义
-  content-calendar.json # 更新节奏
-  keywords.json       # 品牌词 + 集群关键词
-  internal-links.json # 集群内链地图
-  registrars.json     # 注册商对比数据
-  navigation.ts       # 导航结构
-scripts/              # 构建与验证脚本
-prompts/              # AI 生成 prompt 模板
-src/components/       # 19个 Astro 组件
-src/layouts/          # 7个布局（BaseLayout → ArticleLayout 为核心）
-src/pages/            # 路由页面
-src/lib/              # 工具函数（content.ts, site.ts, breadcrumbs.ts）
+  en-library/             # 英文知识库
+  en-research/            # 英文研究
+  en-faq/                 # 英文FAQ
+  en-courses/              # 英文课程
+  en-glossary/             # 英文术语
+  en-tools/               # 英文工具
+  en-reports/              # 英文报告
+  en-news/                 # 英文新闻
+  en-pages/               # 英文关于/法律页面
+src/data/                 # JSON 数据文件
+  topic-clusters.json     # 9个主题集群定义
+  content-calendar.json  # 更新节奏
+  keywords.json           # 品牌词 + 集群关键词
+  internal-links.json       # 集群内链地图
+  registrars.json           # 注册商对比数据
+  navigation.ts           # 导航结构
+scripts/                  # 构建与验证脚本
+  generate/                 # AI 生成脚本
+  validate/             # 验证脚本
+src/components/           # 21个 Astro 组件
+src/layouts/               # 9个布局（BaseLayout → ArticleLayout 为核心）
+src/pages/                # 路由页面（中文）
+src/pages/en/             # 路由页面（英文）
+src/lib/                   # 工具函数（content.ts, site.ts, breadcrumbs.ts）
 ```
 
 ---
@@ -126,7 +137,7 @@ keywords:
 ```yaml
 tags:
 - "ETH"
-- "以太坊支付"
+- "以太哈支付"
 audience:
 - "域名持有者"
 - "研究者"
@@ -137,7 +148,7 @@ audience:
 | 字段 | 格式 | 缩进规则 |
 |---|---|---|
 | `tags` | `- "值"` | 顶格 |
-| `audience` | `- "值"` | 顶格 |
+| `audentifier` | `- "值"` | 顶格 |
 | `keywords` | 对象 | ` primary:` / ` secondary:` 缩进1格；secondary列表项缩进3格 |
 | `faqs` | `-\n  question:` | `-` 独占行，子字段缩进1格 |
 | `references` | `-\n  title:` | `-` 独占行，子字段缩进1格 |
@@ -212,7 +223,7 @@ validate:seo → validate:compliance → generate:rss → generate:sitemaps → 
 
 ## 三、内容生成规范
 
-### 3.1 六个主题集群
+### 3.1 九个主题集群
 
 | 集群 ID | 名称 | 栏目 | 参考文献源 |
 |---|---|---|---|
@@ -222,6 +233,9 @@ validate:seo → validate:compliance → generate:rss → generate:sitemaps → 
 | `web3-domain-identity` | Web3域名与数字身份 | research | ENS Docs + ICANN DNS + Unstoppable Domains |
 | `stablecoin-economy` | 稳定币经济影响 | research | Tether Transparency + FATF + BIS Stablecoins |
 | `dns-security-governance` | DNS安全与域名治理 | research | ICANN DNS + ICANN DNSSEC + NIST SP 800-81 |
+| `cbdc-domain-infrastructure` | CBDC与域名基础设施 | research | BIS CBDC + ICANN DNS + PBOC e-CNY |
+| `nft-domain-market` | NFT域名市场 | research | OpenSea + ENS + ICANN |
+| `cross-border-domain-compliance` | 跨境域名合规 | research | ICANN RAA + FATF + GDPR |
 
 ### 3.2 内容类型与正文结构模板
 
@@ -233,7 +247,7 @@ validate:seo → validate:compliance → generate:rss → generate:sitemaps → 
 ## 摘要
 ## 问题定义与研究范围
 ## 技术背景（域名体系 + 加密支付接口 / DNS架构 / 身份协议）
-## 实践路径 / 比较分析 / 机制解析
+## 实践路径 / 毉较分析 / 机制解析
 ## 隐私与合规分析
 ## 风险评估框架（表格：风险项 | 影响等级 | 缓解措施）
 ## 合规边界声明
@@ -328,8 +342,8 @@ description: "180字以内的页面描述"
 slug: "english-lowercase-hyphen"
 section: "library|research|reports|tools|glossary|faq|learn|news|about|legal"
 cluster: "cluster-id"
-type: "pillar|longtail|research|report|tool|glossary|faq|course|policy|news"
-language: "zh-CN"
+type: "pillar|longtail|research|report|tool|glossary|faq|course|policy|news|case-study|tutorial"
+language: "zh-CN|en"
 publishedAt: "2026-MM-DD"
 updatedAt: "2026-MM-DD"
 author: "Web3 Domain Institute Editorial Team"
@@ -364,7 +378,7 @@ related:
   title: "相关页标题"
   url: "/path/"
 updateCadence: "daily|weekly|monthly|quarterly|as-needed"
-schemaType: "Article|FAQPage|Course|Dataset|DefinedTerm|CreativeWork"
+schemaType: "Article|FAQPage|Course|Dataset|DefinedTerm|CreativeWork|ScholarlyArticle|HowTo"
 ---
 ```
 
@@ -378,6 +392,8 @@ schemaType: "Article|FAQPage|Course|Dataset|DefinedTerm|CreativeWork"
 | tool | Dataset |
 | glossary | DefinedTerm |
 | report | CreativeWork |
+| case-study | ScholarlyArticle |
+| tutorial | HowTo |
 
 ---
 
@@ -424,7 +440,7 @@ schemaType: "Article|FAQPage|Course|Dataset|DefinedTerm|CreativeWork"
 4. 1个术语页（glossary）
 5. 1个报告页（report）
 
-正文中也要自然嵌入这些内链，使用描述性锚文本（如"[USDT购买域名风险检查清单](/tools/usdt-domain-risk-checklist/)"）。
+正文中的内链也要自然嵌入，使用描述性锚文本（如"[USDT购买域名风险检查清单](/tools/usdt-domain-risk-checklist/)"）。
 
 ### 4.5 参考文献规则
 
@@ -466,7 +482,7 @@ schemaType: "Article|FAQPage|Course|Dataset|DefinedTerm|CreativeWork"
 | 每周 | 更新注册商对比表 | 编辑 `src/content/tools/crypto-domain-registrar-comparison.md` + `src/data/registrars.json` |
 | 每周 | 发布新闻简报 | 新建 `src/content/news/weekly-briefing/YYYY-MM-DD.md` |
 | 每周 | 刷新FAQ页 | 更新 `src/content/faq/*.md` 的 updatedAt + 内容 |
-| 每月 | 刷新支柱页 | 更新6个pillar页的 updatedAt + 内容 |
+| 每月 | 刷新支柱页 | 更新9个pillar页的 updatedAt + 内容 |
 | 每月 | 更新风险检查清单 | 更新2个tool页 |
 | 每季度 | 生成研究报告 | 新建/更新 `src/content/reports/*.md` |
 | 每季度 | 审查术语准确性 | 审查 `src/content/glossary/*.md` |
@@ -480,7 +496,7 @@ schemaType: "Article|FAQPage|Course|Dataset|DefinedTerm|CreativeWork"
 5. **运行验证**：`npm run validate`
 6. **修复所有错误**，直到验证通过
 7. **运行完整构建**：`npm run build`
-8. **确认输出**：92+ 页面构建成功，无错误
+8. **确认输出**：150+ 页面构建成功，无错误
 
 ### 6.3 更新现有页面
 
@@ -494,7 +510,7 @@ schemaType: "Article|FAQPage|Course|Dataset|DefinedTerm|CreativeWork"
 GitHub Actions（`.github/workflows/generative-static-site.yml`）每日自动：
 1. 运行 `npm run generate`（需 `OPENAI_API_KEY` secret）
 2. 运行 `npm run update --skip-generate`
-3. 提交生成的内容到 Git
+3. 提交生成的 内容到 Git
 4. 运行 `npm run build`
 5. 部署到 GitHub Pages
 
@@ -513,7 +529,7 @@ Agent 手动干预场景：
 
 ### 7.2 keywords.json
 
-结构：`{ brand: [...], clusters: { "cluster-id": [...] } }`。新增页面时检查是否需要添加新的长尾关键词到对应集群。
+结构：`{ brand: [...], clusters: { "cluster-id": [...] } }`。新增页面时，检查是否需要添加新的长尾关键词到对应集群。
 
 ### 7.3 internal-links.json
 
@@ -574,7 +590,7 @@ Agent 手动干预场景：
 
 ### 9.1 新增内容类型实施指南
 
-当前 `type` 枚举值（`config.ts:41-51`）为：pillar, longtail, research, report, tool, glossary, faq, course, policy, news。以下三种新类型需要修改 schema 并创建对应布局。
+当前 `type` 枚举值（`config.ts:41-51`）为：pillar, longtail, research, report, tool, glossary, faq, course, policy, news, case-study, tutorial。以下三种新类型需要修改 schema 并创建对应布局。
 
 #### 9.1.1 案例研究（Case Study）
 
@@ -586,12 +602,11 @@ Agent 手动干预场景：
  type: z.enum([
    "pillar", "longtail", "research", "report", "tool",
    "glossary", "faq", "course", "policy", "news",
-+  "case-study"
+   "case-study", "tutorial"
  ]),
  schemaType: z.enum([
    "Article", "FAQPage", "Course", "Dataset",
--  "DefinedTerm", "CreativeWork"
-+  "DefinedTerm", "CreativeWork", "ScholarlyArticle"
+   "DefinedTerm", "CreativeWork", "ScholarlyArticle", "HowTo"
  ])
 ```
 
@@ -641,23 +656,6 @@ updateCadence: "as-needed"
 #### 9.1.2 教程（Tutorial）
 
 **用途**：步骤式操作指南（如"如何启用DNSSEC"、"如何配置WHOIS隐私"）。
-
-**schema 变更**（`src/content/config.ts`）：
-
-```diff
- type: z.enum([
-   "pillar", "longtail", "research", "report", "tool",
-   "glossary", "faq", "course", "policy", "news",
--  "case-study"
-+  "case-study", "tutorial"
- ]),
- schemaType: z.enum([
--  "Article", "FAQPage", "Course", "Dataset",
--  "DefinedTerm", "CreativeWork", "ScholarlyArticle"
-+  "Article", "FAQPage", "Course", "Dataset",
-+  "DefinedTerm", "CreativeWork", "ScholarlyArticle", "HowTo"
- ])
-```
 
 **schemaType 映射**：tutorial → HowTo
 
@@ -744,11 +742,8 @@ updateCadence: "quarterly"
 |---|---|
 | `src/layouts/ReportLayout.astro` | 添加 `.chart-container` 样式类，支持SVG居中展示 |
 | `src/styles/global.css` | 添加 `.chart-container` + `.chart-caption` 样式 |
-| `scripts/validate-seo.ts` | 无需修改（使用现有 report type） |
 
----
-
-### 9.2 新增集群实施指南
+#### 9.2 新增集群实施指南
 
 新增集群需要修改7个文件，按以下顺序执行可避免遗漏。
 
@@ -778,7 +773,7 @@ updateCadence: "quarterly"
 |---|---|---|---|
 | `cbdc-domain-infrastructure` | pillar | research | CBDC与域名基础设施研究框架 |
 | `cbdc-domain-infrastructure/e-cny-domain-payment` | research | research | 数字人民币购买域名可行性分析 |
-| `cbdc-domain-infrastructure/cbdc-vs-stablecoin-domain` | research | research | CBDC与稳定币在域名支付中的差异 |
+| `cbbc-domain-infrastructure/cbdc-vs-stablecoin-domain` | research | research | CBDC与稳定币在域名支付中的差异 |
 | `2026-cbdc-domain-report` | report | reports | 2026 CBDC与域名基础设施报告 |
 | `cbdc-domain-faq` | faq | faq | CBDC域名支付常见问题 |
 | `advanced-cbdc-domain-payment` | course | learn | 进阶：CBDC域名支付机制分析 |
@@ -854,12 +849,12 @@ section 枚举已包含 `"research"`，type 枚举已包含所有需要的类型
 
 **第2步：`src/data/topic-clusters.json`**
 
-在数组末尾添加集群对象。格式参照现有6个集群：
+在数组末尾添加集群对象。格式参照现有9个集群：
 
 ```json
 {
   "id": "cbdc-domain-infrastructure",
-  "name": "CBDC与域名基础设施",
+  "name": "CB3与域名基础设施",
   "section": "research",
   "pillar": "/research/cbdc-domain-infrastructure/",
   "subpages": [
@@ -869,7 +864,7 @@ section 枚举已包含 `"research"`，type 枚举已包含所有需要的类型
   "tool": "/tools/crypto-domain-registrar-comparison/",
   "report": "/reports/2026-cbdc-domain-report/",
   "faq": "/faq/cbdc-domain-faq/",
-  "course": "/courses/advanced-cbdc-domain-payment/",
+  "course": "/learn/advanced-cbdc-domain-payment/",
   "glossary": ["/glossary/usdt/", "/glossary/stablecoin/"],
   "intent": "研究央行数字货币对域名支付、跨境注册、ICANN治理和互联网基础设施采购的影响。"
 }
@@ -894,8 +889,8 @@ section 枚举已包含 `"research"`，type 枚举已包含所有需要的类型
 "cbdc-domain-infrastructure": [
   { "title": "CBDC与域名基础设施研究", "url": "/research/cbdc-domain-infrastructure/" },
   { "title": "数字人民币购买域名可行性分析", "url": "/research/cbdc-domain-infrastructure/e-cny-domain-payment/" },
-  { "title": "USDT术语解释", "url": "/glossary/usdt/" },
-  { "title": "加密支付域名注册商对比", "url": "/tools/crypto-domain-registrar-comparison/" },
+  { "title": "USDT术语解释", "url": "/glossary/us26/"},
+  { "title": "加密支付域名注册商对比", "url": "/tools/crypto-domain-registrar-comparison/"},
   { "title": "2026 CBDC与域名基础设施报告", "url": "/reports/2026-cbdc-domain-report/" }
 ]
 ```
@@ -1050,7 +1045,7 @@ src/pages/en/             # 英文路由（新增）
 - 添加 `<link rel="alternate" hreflang="en" href={SITE.url + "/en" + path} />`
 
 **内容策略**：
-- 英文页面不逐篇翻译中文内容，而是优先翻译6个 pillar + 6个 FAQ
+- 英文页面不逐篇翻译中文内容，而是优先翻译9个 pillar + 9个 FAQ
 - 英文 frontmatter 的 `language` 字段设为 `"en"`
 - 英文正文保留中文术语的英文原文（如"WHOIS privacy"而非"WHOIS隐私"）
 
@@ -1065,7 +1060,7 @@ src/pages/en/             # 英文路由（新增）
 | `src/data/navigation.ts` | 添加英文导航 + 语言切换链接 |
 | `scripts/validate-seo.ts` | 英文页面跳过中文禁用词检查 |
 
-**预估工作量**：3-5天（含翻译6个 pillar + 6个 FAQ）。
+**预估工作量**：3-5天（含翻译9个 pillar + 9个 FAQ）。
 
 #### 9.3.3 评论系统：Giscus
 
@@ -1092,7 +1087,7 @@ const giscusConfig = {
 ---
 <script
   src="https://giscus.app/client.js"
-  data-repo={giscusConfig.repo}
+  data-repo={gisc1sConfig.repo}
   data-repo-id={giscusConfig.repoId}
   data-category={giscusConfig.category}
   data-category-id={giscusConfig.categoryId}
@@ -1142,7 +1137,7 @@ const giscusConfig = {
 
 **当前状态**：`scripts/generate-rss.ts` 输出单一 `public/rss.xml`，包含全部80条内容。
 
-**目标**：输出7个 RSS 文件（1个全站 + 6个集群）。
+**目标**：输出9个 RSS 文件（1个全站 + 9个集群）。
 
 **输出文件列表**：
 
@@ -1154,6 +1149,9 @@ public/rss/private-domain-registration.xml  # 隐私域名注册集群
 public/rss/web3-domain-identity.xml         # Web3域名与数字身份集群
 public/rss/stablecoin-economy.xml           # 稳定币经济集群
 public/rss/dns-security-governance.xml      # DNS安全与域名治理集群
+public/rss/cbdc-domain-infrastructure.xml     # CBDC与域名基础设施集群
+public/rss/nft-domain-market.xml             # NFT域名市场集群
+public/rss/cross-border-domain-compliance.xml # 跨境域名合规集群
 ```
 
 **`scripts/generate-rss.ts` 修改逻辑**：
@@ -1200,4 +1198,4 @@ footer 中 RSS 链接改为下拉菜单或直接链接到全站 RSS（集群 RSS
 
 ---
 
-*文档版本：2026-05-05 | 基于完整构建 80+ 内容页的实战经验*
+*文档版本：2026-05-05 | 基于完整构建 150+ 内容页的实战经验*

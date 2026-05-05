@@ -15,7 +15,7 @@ import SchemaDataset from "@/components/SchemaDataset.astro";
 import SchemaDefinedTerm from "@/components/SchemaDefinedTerm.astro";
 import SchemaCreativeWork from "@/components/SchemaCreativeWork.astro";
 import { buildBreadcrumbs } from "@/lib/breadcrumbs";
-import { entryPath, formatDate } from "@/lib/content";
+import { entryPath, formatDate, formatDateEn } from "@/lib/content";
 
 interface Props {
   entry: any;
@@ -27,9 +27,12 @@ const { entry, headings = [], variant = "article" } = Astro.props;
 const data = entry.data;
 const slug = data.slug ?? entry.slug;
 const path = entryPath(entry);
-const breadcrumbs = buildBreadcrumbs(data.section, slug, data.title);
+const isEn = (entry.collection as string).startsWith("en-");
+const locale = isEn ? "en" : "zh-CN";
+const breadcrumbs = buildBreadcrumbs(data.section, slug, data.title, isEn);
 const noindex = data.index === false;
 const schemaType = data.schemaType;
+const fmtDate = isEn ? formatDateEn : formatDate;
 ---
 
 <BaseLayout title={data.title} description={data.description} path={path} noindex={noindex} type="article">
@@ -79,32 +82,32 @@ const schemaType = data.schemaType;
     <SchemaFAQ faqs={data.faqs} />
   </Fragment>
 
-  <Breadcrumbs items={breadcrumbs} />
+<Breadcrumbs items={breadcrumbs} locale={locale} />
 
-  <header class={`article-hero article-hero-${variant}`}>
-    <p class="eyebrow">{data.type} / {data.cluster ?? data.section}</p>
-    <h1>{data.title}</h1>
-    <p class="lede">{data.description}</p>
-    <div class="article-meta">
-      <span>发布日期：{formatDate(data.publishedAt)}</span>
-      <span>最后更新：{formatDate(data.updatedAt)}</span>
-      <span>作者：{data.author}</span>
-      {data.reviewer && <span>审稿：{data.reviewer}</span>}
-      <span>风险级别：{data.riskLevel}</span>
-    </div>
-  </header>
-
-  <div class="article-grid">
-    <aside class="article-aside">
-      <TableOfContents headings={headings} />
-      <InternalLinks links={data.related} />
-    </aside>
-    <article class="prose">
-      <slot />
-      <RiskDisclosure riskLevel={data.riskLevel} />
-      <FAQBlock faqs={data.faqs} />
-      <RelatedArticles related={data.related} />
-      <AuthorBox author={data.author} reviewer={data.reviewer} />
-    </article>
+<header class={`article-hero article-hero-${variant}`}>
+  <p class="eyebrow">{data.type} / {data.cluster ?? data.section}</p>
+  <h1>{data.title}</h1>
+  <p class="lede">{data.description}</p>
+  <div class="article-meta">
+    <span>{isEn ? "Published:" : "发布日期："}{fmtDate(data.publishedAt)}</span>
+    <span>{isEn ? "Updated:" : "最后更新："}{fmtDate(data.updatedAt)}</span>
+    <span>{isEn ? "Author:" : "作者："}{data.author}</span>
+    {data.reviewer && <span>{isEn ? "Reviewer:" : "审稿："}{data.reviewer}</span>}
+    <span>{isEn ? "Risk:" : "风险级别："}{data.riskLevel}</span>
   </div>
+</header>
+
+<div class="article-grid">
+  <aside class="article-aside">
+    <TableOfContents headings={headings} locale={locale} />
+    <InternalLinks links={data.related} locale={locale} />
+  </aside>
+  <article class="prose">
+    <slot />
+    <RiskDisclosure riskLevel={data.riskLevel} locale={locale} />
+    <FAQBlock faqs={data.faqs} locale={locale} />
+    <RelatedArticles related={data.related} locale={locale} />
+    <AuthorBox author={data.author} reviewer={data.reviewer} locale={locale} />
+  </article>
+</div>
 </BaseLayout>

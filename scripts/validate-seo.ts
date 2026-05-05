@@ -2,7 +2,8 @@ import { readContentFiles } from "./lib/content-files";
 
 const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*(?:\/[a-z0-9]+(?:-[a-z0-9]+)*)*$/;
 const badAnchorPattern = /\]\((\/[^)]+)\)/g;
-const genericAnchors = ["点击这里", "更多", "查看", "这篇文章", "了解更多"];
+const zhGenericAnchors = ["点击这里", "更多", "查看", "这篇文章", "了解更多"];
+const enGenericAnchors = ["click here", "read more", "learn more", "this article", "see more"];
 
 const files = await readContentFiles();
 const errors: string[] = [];
@@ -10,6 +11,8 @@ const seenUrls = new Map<string, string>();
 
 for (const item of files) {
   const { file, data, content, url } = item;
+  const isEn = file.includes("/en-");
+  const genericAnchors = isEn ? enGenericAnchors : zhGenericAnchors;
 
   if (!data.title) errors.push(`${file}: missing title`);
   if (!data.description) errors.push(`${file}: missing description`);
@@ -23,7 +26,7 @@ for (const item of files) {
     errors.push(`${file}: slug must be lowercase English words, numbers and hyphens only`);
   }
 
-  if (/[^\x00-\x7F]/.test(url.replace(/^\/(learn|research|library|reports|tools|news|glossary|faq|about|legal)\//, "")) && data.section !== "about") {
+  if (!isEn && /[^\x00-\x7F]/.test(url.replace(/^\/(learn|research|library|reports|tools|news|glossary|faq|about|legal)\//, "")) && data.section !== "about") {
     errors.push(`${file}: URL contains non-ASCII characters`);
   }
 

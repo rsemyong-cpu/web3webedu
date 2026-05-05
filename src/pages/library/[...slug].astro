@@ -1,6 +1,8 @@
 ---
 import { getCollection, render } from "astro:content";
 import ArticleLayout from "@/layouts/ArticleLayout.astro";
+import CaseStudyLayout from "@/layouts/CaseStudyLayout.astro";
+import TutorialLayout from "@/layouts/TutorialLayout.astro";
 
 export async function getStaticPaths() {
   const entries = await getCollection("library", ({ data }) => data.index !== false);
@@ -9,8 +11,17 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
+const type = entry.data.type;
+
+const Layout = type === "case-study" ? CaseStudyLayout : type === "tutorial" ? TutorialLayout : ArticleLayout;
 ---
 
-<ArticleLayout entry={entry} headings={headings}>
-  <Content />
-</ArticleLayout>
+{type === "case-study" || type === "tutorial" ? (
+  <Layout entry={entry} headings={headings}>
+    <Content />
+  </Layout>
+) : (
+  <ArticleLayout entry={entry} headings={headings}>
+    <Content />
+  </ArticleLayout>
+)}
