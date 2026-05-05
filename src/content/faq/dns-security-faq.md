@@ -110,3 +110,12 @@ A: DNS安全治理框架涵盖：ICANN的多利益相关方治理模式、注册
 **Q: DNS安全与加密支付域名有何关联？**
 
 A: 加密支付方式改变了域名注册的资金流转路径，但不改变DNS安全威胁的基本面。无论采用法币还是加密货币购买域名，DNS劫持、缓存投毒和账户窃取的风险均同样存在。加密支付用户应特别关注注册商账户安全，因为链上支付的不可逆性意味着一旦域名因账户失窃而被转移，追回难度可能更高。DNSSEC部署和注册商账户安全加固对所有域名持有者同等重要。
+
+## 相关入口
+
+- [DNS安全与域名治理研究](/research/dns-security-governance/)
+- [DNSSEC部署分析](/research/dns-security-governance/dnssec/)
+- [DNS劫持攻击研究](/research/dns-security-governance/dns-hijacking/)
+- [DNS over HTTPS研究](/research/dns-security-governance/dns-over-https/)
+- [进阶：DNSSEC部署实践](/courses/advanced-dnssec-deployment/)
+- [DNSSEC检查指南](/tools/dnssec-check-guide/)

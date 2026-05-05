@@ -99,3 +99,12 @@ schemaType: "Article"
 - BIS. "Stablecoins and Central Bank Digital Currencies." 2023.
 - European Parliament. "Markets in Crypto-Assets (MiCA) Regulation." 2023.
 - FinCEN. "Application of Money Transmission Regulations to Virtual Currency." 2019.
+
+
+## 相关入口
+
+- [稳定币经济影响研究](/research/stablecoin-economy/)
+- [USDC购买域名分析](/research/stablecoin-economy/usdc-domain-payment/)
+- [CBDC对域名支付的影响](/research/stablecoin-economy/cbdc-domain-impact/)
+- [稳定币与域名支付常见问题](/faq/stablecoin-economy-faq/)
+- [2026 稳定币与互联网支付基础设施报告](/reports/2026-stablecoin-internet-payments/)

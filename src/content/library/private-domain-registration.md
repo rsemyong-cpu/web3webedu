@@ -119,3 +119,13 @@ WHOIS隐私代理（WHOIS Privacy Proxy）是当前主流注册商提供的标�
 1. European Parliament and Council. *Regulation (EU) 2016/679 (General Data Protection Regulation)*, Official Journal of the European Union, L119, 4 May 2016. Art. 5(1)(c), Art. 6, Art. 25.
 2. ICANN. *Registrar Accreditation Agreement (RAA)*, 2013. Sec. 3.3, 3.7.
 3. Hollenbeck, S., Ed. *RFC 7485: Finding Authoritative Registration Data Access Protocol (RDAP) Services*, IETF, March 2015. See also RFC 7480–7484 for the complete RDAP specification suite.
+
+
+## 相关入口
+
+- [匿名注册和隐私保护的区别](/library/private-domain-registration/anonymous-vs-private/)
+- [WHOIS隐私保护详解](/library/private-domain-registration/whois-privacy/)
+- [GDPR与域名注册数据](/library/private-domain-registration/gdpr-domain-data/)
+- [WHOIS隐私保护术语](/glossary/whois/)
+- [域名隐私保护检查清单](/tools/domain-privacy-checklist/)
+- [2026 域名隐私与合规报告](/reports/2026-domain-privacy-compliance-report/)

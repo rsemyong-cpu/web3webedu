@@ -89,6 +89,13 @@ TLD的长期可用性取决于注册局的运营稳定性和ICANN的授权状态
 
 ## 相关术语与阅读
 
+- [USDT购买域名完整指南](/library/buy-domain-with-usdt/)
+- [USDT购买域名是否需要KYC](/library/buy-domain-with-usdt/kyc/)
+- [TRC20和ERC20支付区别](/library/buy-domain-with-usdt/trc20-vs-erc20/)
+- [USDT购买域名安全吗](/library/buy-domain-with-usdt/is-it-safe/)
+- [USDT购买域名退款风险](/library/buy-domain-with-usdt/refund-risk/)
+- [USDT购买域名风险检查清单](/tools/usdt-domain-risk-checklist/)
+
 - [DNS术语](/glossary/dns/)
 - [域名术语](/glossary/domain-name/)
 - [USDT购买域名](/library/buy-domain-with-usdt/)

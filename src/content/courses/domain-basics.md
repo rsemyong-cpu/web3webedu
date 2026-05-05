@@ -94,3 +94,13 @@ schemaType: "Course"
 ## 学习成果
 
 完成本课程后，学习者应能：阐述DNS层级结构与TLD分类体系；区分注册局与注册商的职能及RAA认证机制；描述域名从注册到赎回删除的完整生命周期；分析跨境注册场景中的管辖权差异与合规考量。
+
+
+## 相关入口
+
+- [DNS安全与域名治理研究](/research/dns-security-governance/)
+- [DNSSEC部署分析](/research/dns-security-governance/dnssec/)
+- [DNS劫持攻击研究](/research/dns-security-governance/dns-hijacking/)
+- [DNS over HTTPS研究](/research/dns-security-governance/dns-over-https/)
+- [DNS安全常见问题](/faq/dns-security-faq/)
+- [进阶：DNSSEC部署实践](/courses/advanced-dnssec-deployment/)

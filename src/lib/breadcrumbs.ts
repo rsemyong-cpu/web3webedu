@@ -15,7 +15,10 @@ const labels: Record<string, string> = {
   "private-domain-registration": "隐私域名注册",
   "web3-domain-identity": "Web3域名与数字身份",
   "stablecoin-economy": "稳定币经济",
-  "dns-security-governance": "DNS安全与域名治理"
+  "dns-security-governance": "DNS安全与域名治理",
+  "cbdc-domain-infrastructure": "CBDC与域名基础设施",
+  "nft-domain-market": "NFT域名市场",
+  "cross-border-domain-compliance": "跨境域名合规"
 };
 
 export type BreadcrumbItem = {

@@ -20,7 +20,7 @@ import { entryPath, formatDate } from "@/lib/content";
 interface Props {
   entry: any;
   headings?: { depth: number; slug: string; text: string }[];
-  variant?: "article" | "research" | "report" | "tool" | "glossary" | "course";
+  variant?: "article" | "research" | "report" | "tool" | "glossary" | "course" | "case-study" | "tutorial";
 }
 
 const { entry, headings = [], variant = "article" } = Astro.props;
@@ -35,30 +35,47 @@ const schemaType = data.schemaType;
 <BaseLayout title={data.title} description={data.description} path={path} noindex={noindex} type="article">
   <Fragment slot="head">
     <SchemaBreadcrumb items={breadcrumbs} />
-    {schemaType === "Course" ? (
-      <SchemaCourse title={data.title} description={data.description} path={path} />
-    ) : schemaType === "Dataset" ? (
-      <SchemaDataset title={data.title} description={data.description} path={path} updatedAt={data.updatedAt} />
-    ) : schemaType === "DefinedTerm" ? (
-      <SchemaDefinedTerm title={data.title} description={data.description} path={path} />
-    ) : schemaType === "CreativeWork" ? (
-      <SchemaCreativeWork
-        title={data.title}
-        description={data.description}
-        path={path}
-        publishedAt={data.publishedAt}
-        updatedAt={data.updatedAt}
-      />
-    ) : (
-      <SchemaArticle
-        title={data.title}
-        description={data.description}
-        path={path}
-        publishedAt={data.publishedAt}
-        updatedAt={data.updatedAt}
-        author={data.author}
-      />
-    )}
+  {schemaType === "Course" ? (
+    <SchemaCourse title={data.title} description={data.description} path={path} />
+  ) : schemaType === "Dataset" ? (
+    <SchemaDataset title={data.title} description={data.description} path={path} updatedAt={data.updatedAt} />
+  ) : schemaType === "DefinedTerm" ? (
+    <SchemaDefinedTerm title={data.title} description={data.description} path={path} />
+  ) : schemaType === "CreativeWork" ? (
+    <SchemaCreativeWork
+      title={data.title}
+      description={data.description}
+      path={path}
+      publishedAt={data.publishedAt}
+      updatedAt={data.updatedAt}
+    />
+  ) : schemaType === "HowTo" ? (
+    <SchemaArticle
+      title={data.title}
+      description={data.description}
+      path={path}
+      publishedAt={data.publishedAt}
+      updatedAt={data.updatedAt}
+      author={data.author}
+    />
+  ) : schemaType === "ScholarlyArticle" ? (
+    <SchemaCreativeWork
+      title={data.title}
+      description={data.description}
+      path={path}
+      publishedAt={data.publishedAt}
+      updatedAt={data.updatedAt}
+    />
+  ) : (
+    <SchemaArticle
+      title={data.title}
+      description={data.description}
+      path={path}
+      publishedAt={data.publishedAt}
+      updatedAt={data.updatedAt}
+      author={data.author}
+    />
+  )}
     <SchemaFAQ faqs={data.faqs} />
   </Fragment>
 

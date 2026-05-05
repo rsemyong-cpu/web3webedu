@@ -115,3 +115,13 @@ DNS over HTTPS（DoH）与DNS over TLS（DoT）通过加密传输层解决传统
 - ICANN DNS概览：域名系统核心解析机制、根区管理与ICANN治理框架。[来源](https://www.icann.org/resources/pages/what-2012-02-25-en)
 - ICANN DNSSEC说明：DNS安全扩展的密码学验证机制、密钥管理与部署指南。[来源](https://www.icann.org/resources/pages/dnssec-what-is-it-and-why-is-it-important-2019-02-21-en)
 - NIST SP 800-81 Rev.1：DNS安全部署指南，涵盖DNSSEC、密钥管理与系统加固最佳实践。[来源](https://csrc.nist.gov/publications/detail/sp/800-81/rev-1/final)
+
+
+## 相关入口
+
+- [DNSSEC部署分析](/research/dns-security-governance/dnssec/)
+- [DNS劫持攻击研究](/research/dns-security-governance/dns-hijacking/)
+- [DNS over HTTPS研究](/research/dns-security-governance/dns-over-https/)
+- [DNS安全常见问题](/faq/dns-security-faq/)
+- [进阶：DNSSEC部署实践](/courses/advanced-dnssec-deployment/)
+- [DNSSEC检查指南](/tools/dnssec-check-guide/)

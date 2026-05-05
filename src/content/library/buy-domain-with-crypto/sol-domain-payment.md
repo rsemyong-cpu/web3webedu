@@ -63,6 +63,16 @@ updateCadence: "as-needed"
 schemaType: "Article"
 ---
 
+## 相关入口
+
+- [加密货币购买域名完整指南](/library/buy-domain-with-crypto/)
+- [USDT vs BTC购买域名](/library/buy-domain-with-crypto/btc-vs-usdt/)
+- [ETH支付域名注册](/library/buy-domain-with-crypto/eth-domain-payment/)
+- [加密支付域名注册商对比](/tools/crypto-domain-registrar-comparison/)
+- [2026 加密货币域名注册商观察](/reports/2026-crypto-domain-registrar-observatory/)
+- [加密货币购买域名常见问题](/faq/crypto-domain-payment-faq/)
+
+
 ## 摘要
 
 Solana网络以低手续费和高吞吐著称，SOL支付域名注册在成本和速度上具有天然优势。但SOL同样面临价格波动风险，且支持SOL支付的域名注册商目前仍较少，域名持有者需综合评估可行性与风险。

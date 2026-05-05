@@ -14,6 +14,21 @@
       "cluster": "private-domain-registration",
       "type": "longtail",
       "count": 1
+    },
+    {
+      "cluster": "cbdc-domain-infrastructure",
+      "type": "longtail",
+      "count": 1
+    },
+    {
+      "cluster": "nft-domain-market",
+      "type": "longtail",
+      "count": 1
+    },
+    {
+      "cluster": "cross-border-domain-compliance",
+      "type": "longtail",
+      "count": 1
     }
   ],
   "weekly": [

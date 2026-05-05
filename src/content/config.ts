@@ -48,7 +48,9 @@ const commonContentSchema = z.object({
     "faq",
     "course",
     "policy",
-    "news"
+    "news",
+    "case-study",
+    "tutorial"
   ]),
   language: z.string().default("zh-CN"),
   publishedAt: z.coerce.date(),
@@ -73,7 +75,9 @@ const commonContentSchema = z.object({
       "Course",
       "Dataset",
       "DefinedTerm",
-      "CreativeWork"
+      "CreativeWork",
+      "HowTo",
+      "ScholarlyArticle"
     ])
     .default("Article")
 });

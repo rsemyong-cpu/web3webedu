@@ -100,3 +100,13 @@ DNSSEC部署故障主要表现为域名解析失败（SERVFAIL），根本原因
 ## 学习成果
 
 完成本课程后，学习者应能够：完整描述DNSSEC信任链的验证逻辑与签名机制；制定并执行KSK/ZSK轮换计划与密钥安全存储方案；独立完成DS记录的生成、提交与注册局交互全流程；系统化排查DNSSEC部署中的常见故障并建立预防性监控体系。课程内容仅供技术教育参考，生产环境部署应在测试环境充分验证后进行。
+
+
+## 相关入口
+
+- [DNS安全与域名治理研究](/research/dns-security-governance/)
+- [DNSSEC部署分析](/research/dns-security-governance/dnssec/)
+- [DNS劫持攻击研究](/research/dns-security-governance/dns-hijacking/)
+- [DNS over HTTPS研究](/research/dns-security-governance/dns-over-https/)
+- [DNS安全常见问题](/faq/dns-security-faq/)
+- [DNSSEC检查指南](/tools/dnssec-check-guide/)

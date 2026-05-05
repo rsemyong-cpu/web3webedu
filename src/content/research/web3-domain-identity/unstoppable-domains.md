@@ -64,6 +64,15 @@ updateCadence: "as-needed"
 schemaType: "Article"
 ---
 
+## 相关入口
+
+- [Web3域名与数字身份研究](/research/web3-domain-identity/)
+- [ENS与DNS对比分析](/research/web3-domain-identity/ens-vs-dns/)
+- [Web3域名常见问题](/faq/web3-domain-identity-faq/)
+- [进阶：Web3域名集成开发](/courses/advanced-web3-domain-integration/)
+- [2026 Web3域名趋势报告](/reports/2026-web3-domain-trends/)
+
+
 ## 摘要
 
 Unstoppable Domains是基于区块链的域名系统，以NFT形式发行域名，购买后永久持有无需续费。其与传统ICANN域名在所有权模型、解析机制、浏览器兼容性和抗审查能力上存在根本差异。域名持有者应理解两者的定位差异后再决定使用场景。

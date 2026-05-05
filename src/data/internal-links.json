@@ -55,5 +55,35 @@
     { "title": "进阶：DNSSEC部署实践", "url": "/courses/advanced-dnssec-deployment/" },
     { "title": "DNSSEC检查指南", "url": "/tools/dnssec-check-guide/" },
     { "title": "2026 DNS安全与域名治理报告", "url": "/reports/2026-dns-security-governance-report/" }
+  ],
+  "cbdc-domain-infrastructure": [
+    { "title": "CBDC与域名基础设施研究", "url": "/research/cbdc-domain-infrastructure/" },
+    { "title": "数字人民币购买域名可行性分析", "url": "/research/cbdc-domain-infrastructure/e-cny-domain-payment/" },
+    { "title": "CBDC与稳定币在域名支付中的差异", "url": "/research/cbdc-domain-infrastructure/cbdc-vs-stablecoin-domain/" },
+    { "title": "USDT术语解释", "url": "/glossary/usdt/" },
+    { "title": "加密支付域名注册商对比", "url": "/tools/crypto-domain-registrar-comparison/" },
+    { "title": "2026 CBDC与域名基础设施报告", "url": "/reports/2026-cbdc-domain-report/" },
+    { "title": "CBDC域名支付常见问题", "url": "/faq/cbdc-domain-faq/" },
+    { "title": "进阶：CBDC域名支付机制分析", "url": "/courses/advanced-cbdc-domain-payment/" }
+  ],
+  "nft-domain-market": [
+    { "title": "NFT域名市场研究", "url": "/research/nft-domain-market/" },
+    { "title": "ENS域名交易机制与流动性分析", "url": "/research/nft-domain-market/ens-name-trading/" },
+    { "title": "NFT域名估值方法与风险", "url": "/research/nft-domain-market/nft-domain-valuation/" },
+    { "title": "Web3域名术语", "url": "/glossary/web3-domain/" },
+    { "title": "加密支付域名注册商对比", "url": "/tools/crypto-domain-registrar-comparison/" },
+    { "title": "2026 NFT域名市场报告", "url": "/reports/2026-nft-domain-market-report/" },
+    { "title": "NFT域名市场常见问题", "url": "/faq/nft-domain-faq/" },
+    { "title": "进阶：NFT域名交易与风险", "url": "/courses/advanced-nft-domain-trading/" }
+  ],
+  "cross-border-domain-compliance": [
+    { "title": "跨境域名合规研究", "url": "/research/cross-border-domain-compliance/" },
+    { "title": "各司法管辖区域名注册KYC要求比较", "url": "/research/cross-border-domain-compliance/kyc-jurisdiction-comparison/" },
+    { "title": "制裁筛查与域名注册合规风险", "url": "/research/cross-border-domain-compliance/sanction-screening-domain/" },
+    { "title": "KYC术语解释", "url": "/glossary/kyc/" },
+    { "title": "域名隐私保护检查清单", "url": "/tools/domain-privacy-checklist/" },
+    { "title": "2026 跨境域名合规报告", "url": "/reports/2026-cross-border-domain-compliance-report/" },
+    { "title": "跨境域名合规常见问题", "url": "/faq/cross-border-domain-faq/" },
+    { "title": "进阶：跨境域名合规审查", "url": "/courses/advanced-cross-border-compliance/" }
   ]
 }

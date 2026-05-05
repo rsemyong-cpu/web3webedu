@@ -64,6 +64,15 @@ updateCadence: "as-needed"
 schemaType: "Article"
 ---
 
+## 相关入口
+
+- [稳定币经济影响研究](/research/stablecoin-economy/)
+- [稳定币与域名支付](/research/stablecoin-economy/stablecoins-and-domain-payments/)
+- [USDC购买域名分析](/research/stablecoin-economy/usdc-domain-payment/)
+- [稳定币与域名支付常见问题](/faq/stablecoin-economy-faq/)
+- [2026 稳定币与互联网支付基础设施报告](/reports/2026-stablecoin-internet-payments/)
+
+
 ## 摘要
 
 全球央行数字货币研发正在加速推进，数字人民币、数字欧元等项目已进入试点或立法阶段。CBDC作为主权数字货币，在信用等级和结算效率上优于稳定币，但其中心化架构和可编程性特征也带来新的考量。对域名持有者而言，CBDC可能在未来提供新的支付选择，但其对加密支付生态和金融隐私的影响值得关注。

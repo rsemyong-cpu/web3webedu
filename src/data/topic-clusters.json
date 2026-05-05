@@ -98,5 +98,53 @@
     "course": "/courses/advanced-dnssec-deployment/",
     "glossary": ["/glossary/dns/", "/glossary/dnssec/"],
     "intent": "把站点从支付教程扩展到互联网基础设施、安全和治理研究。"
+  },
+  {
+    "id": "cbdc-domain-infrastructure",
+    "name": "CBDC与域名基础设施",
+    "section": "research",
+    "pillar": "/research/cbdc-domain-infrastructure/",
+    "subpages": [
+      "/research/cbdc-domain-infrastructure/e-cny-domain-payment/",
+      "/research/cbdc-domain-infrastructure/cbdc-vs-stablecoin-domain/"
+    ],
+    "tool": "/tools/crypto-domain-registrar-comparison/",
+    "report": "/reports/2026-cbdc-domain-report/",
+    "faq": "/faq/cbdc-domain-faq/",
+    "course": "/courses/advanced-cbdc-domain-payment/",
+    "glossary": ["/glossary/usdt/", "/glossary/stablecoin/"],
+    "intent": "研究央行数字货币对域名支付、跨境注册、ICANN治理和互联网基础设施采购的影响。"
+  },
+  {
+    "id": "nft-domain-market",
+    "name": "NFT域名市场",
+    "section": "research",
+    "pillar": "/research/nft-domain-market/",
+    "subpages": [
+      "/research/nft-domain-market/ens-name-trading/",
+      "/research/nft-domain-market/nft-domain-valuation/"
+    ],
+    "tool": "/tools/crypto-domain-registrar-comparison/",
+    "report": "/reports/2026-nft-domain-market-report/",
+    "faq": "/faq/nft-domain-faq/",
+    "course": "/courses/advanced-nft-domain-trading/",
+    "glossary": ["/glossary/web3-domain/", "/glossary/ens/"],
+    "intent": "研究NFT域名交易机制、估值方法、流动性风险和与传统域名市场的比较。"
+  },
+  {
+    "id": "cross-border-domain-compliance",
+    "name": "跨境域名合规",
+    "section": "research",
+    "pillar": "/research/cross-border-domain-compliance/",
+    "subpages": [
+      "/research/cross-border-domain-compliance/kyc-jurisdiction-comparison/",
+      "/research/cross-border-domain-compliance/sanction-screening-domain/"
+    ],
+    "tool": "/tools/domain-privacy-checklist/",
+    "report": "/reports/2026-cross-border-domain-compliance-report/",
+    "faq": "/faq/cross-border-domain-faq/",
+    "course": "/courses/advanced-cross-border-compliance/",
+    "glossary": ["/glossary/kyc/", "/glossary/whois/"],
+    "intent": "比较多司法管辖区域名注册的KYC、数据保护、制裁合规和争议解决机制差异。"
   }
 ]

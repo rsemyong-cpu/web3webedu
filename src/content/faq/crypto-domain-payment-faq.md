@@ -109,3 +109,12 @@ A: 链选择需综合考量手续费、确认速度和注册商支持范围。TR
 **Q: 加密货币购买域名能否获得发票？合规要求如何？**
 
 A: 部分注册商可为加密支付订单提供电子发票或支付凭证，但发票格式和税务处理因注册商所在地司法辖区而异。企业用户应注意加密支出的会计处理和税务申报要求，确保支付记录、注册商凭证与链上交易哈希三者可对应，以满足审计和合规需求。
+
+## 相关入口
+
+- [加密货币购买域名完整指南](/library/buy-domain-with-crypto/)
+- [USDT vs BTC购买域名](/library/buy-domain-with-crypto/btc-vs-usdt/)
+- [ETH支付域名注册](/library/buy-domain-with-crypto/eth-domain-payment/)
+- [SOL支付域名注册](/library/buy-domain-with-crypto/sol-domain-payment/)
+- [加密支付域名注册商对比](/tools/crypto-domain-registrar-comparison/)
+- [2026 加密货币域名注册商观察](/reports/2026-crypto-domain-registrar-observatory/)

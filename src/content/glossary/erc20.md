@@ -89,6 +89,13 @@ ERC-20 USDT的主要风险集中在Gas费不确定性和智能合约安全两个
 
 ## 相关术语与阅读
 
+- [稳定币经济影响研究](/research/stablecoin-economy/)
+- [稳定币与域名支付](/research/stablecoin-economy/stablecoins-and-domain-payments/)
+- [USDC购买域名分析](/research/stablecoin-economy/usdc-domain-payment/)
+- [CBDC对域名支付的影响](/research/stablecoin-economy/cbdc-domain-impact/)
+- [稳定币与域名支付常见问题](/faq/stablecoin-economy-faq/)
+- [2026 稳定币与互联网支付基础设施报告](/reports/2026-stablecoin-internet-payments/)
+
 - [USDT术语](/glossary/usdt/)
 - [TRC-20 vs ERC-20](/library/buy-domain-with-usdt/trc20-vs-erc20/)
 - [稳定币术语](/glossary/stablecoin/)

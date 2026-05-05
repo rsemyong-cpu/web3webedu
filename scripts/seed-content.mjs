@@ -41,6 +41,21 @@ const clusterRefs = {
     { title: "ICANN: Domain Name System (DNS)", url: "https://www.icann.org/resources/pages/what-2012-02-25-en", source: "ICANN" },
     { title: "ICANN: Registrar Accreditation Agreement", url: "https://www.icann.org/resources/pages/approved-with-specs-2013-09-17-en", source: "ICANN" },
     { title: "GDPR: Official Regulation Text", url: "https://gdpr-info.eu/", source: "EU" }
+  ],
+  "cbdc-domain-infrastructure": [
+    { title: "BIS: Central Bank Digital Currencies", url: "https://www.bis.org/topics/cbdc.htm", source: "BIS" },
+    { title: "ICANN: Domain Name System (DNS)", url: "https://www.icann.org/resources/pages/what-2012-02-25-en", source: "ICANN" },
+    { title: "People's Bank of China: Digital Currency (e-CNY)", url: "https://www.pbc.gov.cn/en/3695837369583789952/index.html", source: "PBOC" }
+  ],
+  "nft-domain-market": [
+    { title: "OpenSea: Domain Category", url: "https://opensea.io/category/domain-names", source: "OpenSea" },
+    { title: "Ethereum Name Service (ENS): Documentation", url: "https://docs.ens.domains/", source: "ENS" },
+    { title: "ICANN: Domain Name System (DNS)", url: "https://www.icann.org/resources/pages/what-2012-02-25-en", source: "ICANN" }
+  ],
+  "cross-border-domain-compliance": [
+    { title: "ICANN: Registrar Accreditation Agreement", url: "https://www.icann.org/resources/pages/approved-with-specs-2013-09-17-en", source: "ICANN" },
+    { title: "FATF: International Standards on Combating Money Laundering", url: "https://www.fatf-gafi.org/en/publications/Fatfguidance/Fatf-recommendations.html", source: "FATF" },
+    { title: "GDPR: Official Regulation Text", url: "https://gdpr-info.eu/", source: "EU" }
   ]
 };
 
@@ -86,6 +101,27 @@ const clusterLinks = {
     ["DNS术语解释", "/glossary/dns/"],
     ["DNSSEC检测指南", "/tools/dnssec-check-guide/"],
     ["2026 DNS安全与域名治理报告", "/reports/2026-dns-security-governance-report/"]
+  ],
+  "cbdc-domain-infrastructure": [
+    ["CBDC与域名基础设施研究", "/research/cbdc-domain-infrastructure/"],
+    ["数字人民币购买域名可行性分析", "/research/cbdc-domain-infrastructure/e-cny-domain-payment/"],
+    ["USDT术语解释", "/glossary/usdt/"],
+    ["加密支付域名注册商对比", "/tools/crypto-domain-registrar-comparison/"],
+    ["2026 CBDC与域名基础设施报告", "/reports/2026-cbdc-domain-report/"]
+  ],
+  "nft-domain-market": [
+    ["NFT域名市场研究", "/research/nft-domain-market/"],
+    ["ENS域名交易机制与流动性分析", "/research/nft-domain-market/ens-name-trading/"],
+    ["Web3域名术语", "/glossary/web3-domain/"],
+    ["加密支付域名注册商对比", "/tools/crypto-domain-registrar-comparison/"],
+    ["2026 NFT域名市场报告", "/reports/2026-nft-domain-market-report/"]
+  ],
+  "cross-border-domain-compliance": [
+    ["跨境域名合规研究", "/research/cross-border-domain-compliance/"],
+    ["各司法管辖区域名注册KYC要求比较", "/research/cross-border-domain-compliance/kyc-jurisdiction-comparison/"],
+    ["KYC术语解释", "/glossary/kyc/"],
+    ["域名隐私保护检查清单", "/tools/domain-privacy-checklist/"],
+    ["2026 跨境域名合规报告", "/reports/2026-cross-border-domain-compliance-report/"]
   ]
 };
 
@@ -139,6 +175,94 @@ function bodyFor(item) {
   const links = related(item.cluster);
   const [pillar, peer, term, tool, report] = links;
   const focus = item.focus ?? item.description;
+
+  if (item.type === "case-study") {
+    return `## 摘要
+
+${focus}
+
+## 事件背景
+
+| 日期 | 事件 | 信息来源 |
+| --- | --- | --- |
+| 待补充 | 待补充 | 待核验 |
+
+## 技术分析
+
+本案例涉及支付链、DNS配置、隐私设置或注册商响应中的至少一个技术维度。具体分析需在事件信息核验后补充。
+
+## 影响评估
+
+| 影响维度 | 受影响对象 | 严重程度 |
+| --- | --- | --- |
+| 待补充 | 待补充 | 待评估 |
+
+## 教训与建议
+
+案例研究的教训与建议需基于可验证事实，不得编造事件细节或对注册商做评价性结论。
+
+## 合规边界
+
+本站以研究教育方式记录域名支付相关事件，内容不得用于规避监管、逃避制裁或其他违法目的。
+
+## 相关入口
+
+- [${pillar.title}](${pillar.url})
+- [${peer.title}](${peer.url})
+- [${term.title}](${term.url})
+- [${tool.title}](${tool.url})
+- [${report.title}](${report.url})
+
+## 参考资料
+
+- 参考资料需基于公开可验证信息来源。
+`;
+  }
+
+  if (item.type === "tutorial") {
+    return `## 摘要
+
+${focus}
+
+## 前置条件
+
+- 需要准备的账户、工具或信息（待补充）
+
+## 操作步骤
+
+1. **步骤一**：操作描述（待补充）
+   - 预期结果：待补充
+   - 常见错误：待补充
+
+2. **步骤二**：操作描述（待补充）
+   - 预期结果：待补充
+   - 常见错误：待补充
+
+## 验证方法
+
+如何确认操作成功（待补充）。
+
+## 风险与限制
+
+教程操作界面可能随注册商更新而变化。链上操作具有不可逆特征，操作前应确认收款地址、链选择和订单状态。
+
+## 合规边界
+
+教程不得提供规避监管、逃避KYC的操作步骤。涉及隐私保护设置时，应明确合规使用场景。
+
+## 相关入口
+
+- [${pillar.title}](${pillar.url})
+- [${peer.title}](${peer.url})
+- [${term.title}](${term.url})
+- [${tool.title}](${tool.url})
+- [${report.title}](${report.url})
+
+## 参考资料
+
+- 参考资料需基于注册商官方文档和公开技术标准。
+`;
+  }
 
   if (item.type === "tool") {
     return `## 摘要
@@ -751,16 +875,20 @@ function normalizeItem(item) {
   const schemaType =
     item.schemaType ??
     (item.type === "glossary"
-      ? "DefinedTerm"
-      : item.type === "tool"
-        ? "Dataset"
-        : item.type === "report"
-          ? "CreativeWork"
-          : item.type === "course"
-            ? "Course"
-            : item.type === "faq"
-              ? "FAQPage"
-              : "Article");
+    ? "DefinedTerm"
+    : item.type === "tool"
+    ? "Dataset"
+    : item.type === "report"
+    ? "CreativeWork"
+    : item.type === "course"
+    ? "Course"
+    : item.type === "faq"
+    ? "FAQPage"
+    : item.type === "tutorial"
+    ? "HowTo"
+    : item.type === "case-study"
+    ? "ScholarlyArticle"
+    : "Article");
   return {
     title: item.title,
     description: item.description,

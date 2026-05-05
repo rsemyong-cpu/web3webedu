@@ -41,7 +41,10 @@ for (const item of files) {
     errors.push(`${file}: missing FAQ frontmatter`);
   }
 
-
+  const internalLinks = content.match(badAnchorPattern) ?? [];
+  if (internalLinks.length < 5) {
+    errors.push(`${file}: needs at least 5 internal links (found ${internalLinks.length})`);
+  }
 
   for (const anchor of genericAnchors) {
     if (content.includes(`[${anchor}]`)) {

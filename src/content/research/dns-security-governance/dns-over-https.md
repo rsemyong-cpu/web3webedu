@@ -65,6 +65,16 @@ updateCadence: "as-needed"
 schemaType: "Article"
 ---
 
+## 相关入口
+
+- [DNS安全与域名治理研究](/research/dns-security-governance/)
+- [DNSSEC部署分析](/research/dns-security-governance/dnssec/)
+- [DNS劫持攻击研究](/research/dns-security-governance/dns-hijacking/)
+- [DNS安全常见问题](/faq/dns-security-faq/)
+- [进阶：DNSSEC部署实践](/courses/advanced-dnssec-deployment/)
+- [DNSSEC检查指南](/tools/dnssec-check-guide/)
+
+
 ## 摘要
 
 DNS over HTTPS和DNS over TLS协议通过加密DNS查询和响应，防止第三方监听和篡改用户的DNS请求。DoH和DoT在隐私保护和部署策略上存在差异，其推广对域名持有者的DNS解析监控、安全策略和运营方式具有实质影响。

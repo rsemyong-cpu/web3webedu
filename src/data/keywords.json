@@ -62,6 +62,32 @@
       "DNS over HTTPS",
       "DoH DoT",
       "DNS安全检查"
+    ],
+    "cbdc-domain-infrastructure": [
+      "CBDC域名支付",
+      "央行数字货币域名",
+      "cbdc domain payment",
+      "数字人民币购买域名",
+      "CBDC与域名",
+      "e-CNY域名支付"
+    ],
+    "nft-domain-market": [
+      "NFT域名",
+      "NFT域名交易",
+      "域名NFT估值",
+      "ENS域名交易",
+      "nft domain name",
+      "域名NFT市场",
+      "NFT域名流动性"
+    ],
+    "cross-border-domain-compliance": [
+      "跨境域名合规",
+      "域名注册合规",
+      "多国域名注册",
+      "域名KYC比较",
+      "制裁筛查域名",
+      "cross-border domain compliance",
+      "域名争议解决"
     ]
   }
 }

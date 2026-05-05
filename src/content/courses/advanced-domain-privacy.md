@@ -93,3 +93,13 @@ GDPR将域名注册数据中的自然人信息界定为个人数据，适用第6
 ## 学习成果
 
 完成本课程后，学习者应能够：辨析WHOIS与RDAP数据模型在隐私保护层面的结构性差异；评估注册商的GDPR合规水平并制定数据保护策略；基于系统化框架选型隐私代理服务；理解跨境域名隐私争议的法律机制并制定应对方案。课程内容仅供教育研究参考，不构成法律建议，具体合规决策应咨询专业法律意见。
+
+
+## 相关入口
+
+- [隐私域名注册完整指南](/library/private-domain-registration/)
+- [匿名注册和隐私保护的区别](/library/private-domain-registration/anonymous-vs-private/)
+- [WHOIS隐私保护详解](/library/private-domain-registration/whois-privacy/)
+- [GDPR与域名注册数据](/library/private-domain-registration/gdpr-domain-data/)
+- [WHOIS隐私保护术语](/glossary/whois/)
+- [域名隐私保护检查清单](/tools/domain-privacy-checklist/)

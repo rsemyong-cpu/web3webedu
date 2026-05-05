@@ -64,6 +64,15 @@ updateCadence: "as-needed"
 schemaType: "Article"
 ---
 
+## 相关入口
+
+- [稳定币经济影响研究](/research/stablecoin-economy/)
+- [稳定币与域名支付](/research/stablecoin-economy/stablecoins-and-domain-payments/)
+- [CBDC对域名支付的影响](/research/stablecoin-economy/cbdc-domain-impact/)
+- [稳定币与域名支付常见问题](/faq/stablecoin-economy-faq/)
+- [2026 稳定币与互联网支付基础设施报告](/reports/2026-stablecoin-internet-payments/)
+
+
 ## 摘要
 
 USDC是由Circle发行的合规稳定币，以储备透明度和多链部署为差异化优势。在域名支付场景中，USDC在合规性和透明度上优于USDT，但注册商支持度仍不及USDT。域名持有者应根据支付渠道可用性和风险偏好选择稳定币。
