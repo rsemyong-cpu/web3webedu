@@ -40,6 +40,7 @@ const translatedPaths = new Set([
   "/library/private-domain-registration/",
   "/library/private-domain-registration/whois-privacy/",
   "/research/dns-security-governance/",
+  "/research/dns-security-governance/dns-hijacking/",
   "/research/dns-security-governance/dnssec/",
   "/research/stablecoin-economy/",
   "/research/stablecoin-economy/stablecoins-and-domain-payments/",
