@@ -52,13 +52,13 @@ related:
     url: "/library/private-domain-registration/"
   -
     title: "GDPR与域名合规专题"
-    url: "/library/private-domain-registration/gdpr-domain-compliance/"
+    url: "/library/private-domain-registration/gdpr-domain-data/"
   -
     title: "域名隐私检查工具"
-    url: "/tools/domain-privacy-check/"
+    url: "/tools/domain-privacy-checklist/"
   -
     title: "隐私术语解释"
-    url: "/glossary/domain-privacy/"
+    url: "/glossary/whois/"
 updateCadence: "quarterly"
 schemaType: "Course"
 ---

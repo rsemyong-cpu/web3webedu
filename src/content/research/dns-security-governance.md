@@ -123,5 +123,5 @@ DNS over HTTPS（DoH）与DNS over TLS（DoT）通过加密传输层解决传统
 - [DNS劫持攻击研究](/research/dns-security-governance/dns-hijacking/)
 - [DNS over HTTPS研究](/research/dns-security-governance/dns-over-https/)
 - [DNS安全常见问题](/faq/dns-security-faq/)
-- [进阶：DNSSEC部署实践](/courses/advanced-dnssec-deployment/)
+- [进阶：DNSSEC部署实践](/learn/advanced-dnssec-deployment/)
 - [DNSSEC检查指南](/tools/dnssec-check-guide/)

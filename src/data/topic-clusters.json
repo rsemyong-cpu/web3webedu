@@ -13,7 +13,7 @@
     "tool": "/tools/usdt-domain-risk-checklist/",
     "report": "/reports/2026-usdt-domain-report/",
     "faq": "/faq/usdt-domain-registration-faq/",
-    "course": "/courses/advanced-usdt-domain-payment/",
+    "course": "/learn/advanced-usdt-domain-payment/",
     "glossary": ["/glossary/usdt/", "/glossary/domain-name/"],
     "intent": "解释USDT购买域名的流程、风险、合规边界和注册商评估方法。"
   },
@@ -46,7 +46,7 @@
     "tool": "/tools/domain-privacy-checklist/",
     "report": "/reports/2026-domain-privacy-compliance-report/",
     "faq": "/faq/private-domain-registration-faq/",
-    "course": "/courses/advanced-domain-privacy/",
+    "course": "/learn/advanced-domain-privacy/",
     "glossary": ["/glossary/whois/", "/glossary/rdap/"],
     "intent": "用合规语言覆盖匿名购买域名相关需求，强调WHOIS隐私、边界和风险。"
   },
@@ -62,7 +62,7 @@
     "tool": "/tools/crypto-domain-registrar-comparison/",
     "report": "/reports/2026-web3-domain-trends/",
     "faq": "/faq/web3-domain-identity-faq/",
-    "course": "/courses/advanced-web3-domain-integration/",
+    "course": "/learn/advanced-web3-domain-integration/",
     "glossary": ["/glossary/web3-domain/", "/glossary/dns/", "/glossary/ens/"],
     "intent": "研究Web3域名、钱包地址、品牌保护和传统DNS之间的关系。"
   },
@@ -95,7 +95,7 @@
     "tool": "/tools/dnssec-check-guide/",
     "report": "/reports/2026-dns-security-governance-report/",
     "faq": "/faq/dns-security-faq/",
-    "course": "/courses/advanced-dnssec-deployment/",
+    "course": "/learn/advanced-dnssec-deployment/",
     "glossary": ["/glossary/dns/", "/glossary/dnssec/"],
     "intent": "把站点从支付教程扩展到互联网基础设施、安全和治理研究。"
   },
@@ -111,7 +111,7 @@
     "tool": "/tools/crypto-domain-registrar-comparison/",
     "report": "/reports/2026-cbdc-domain-report/",
     "faq": "/faq/cbdc-domain-faq/",
-    "course": "/courses/advanced-cbdc-domain-payment/",
+    "course": "/learn/advanced-cbdc-domain-payment/",
     "glossary": ["/glossary/usdt/", "/glossary/stablecoin/"],
     "intent": "研究央行数字货币对域名支付、跨境注册、ICANN治理和互联网基础设施采购的影响。"
   },
@@ -127,7 +127,7 @@
     "tool": "/tools/crypto-domain-registrar-comparison/",
     "report": "/reports/2026-nft-domain-market-report/",
     "faq": "/faq/nft-domain-faq/",
-    "course": "/courses/advanced-nft-domain-trading/",
+    "course": "/learn/advanced-nft-domain-trading/",
     "glossary": ["/glossary/web3-domain/", "/glossary/ens/"],
     "intent": "研究NFT域名交易机制、估值方法、流动性风险和与传统域名市场的比较。"
   },
@@ -142,8 +142,8 @@
     ],
     "tool": "/tools/domain-privacy-checklist/",
     "report": "/reports/2026-cross-border-domain-compliance-report/",
-    "faq": "/faq/cross-border-domain-faq/",
-    "course": "/courses/advanced-cross-border-compliance/",
+    "faq": "/faq/cross-border-domain-compliance-faq/",
+    "course": "/learn/advanced-cross-border-domain-compliance/",
     "glossary": ["/glossary/kyc/", "/glossary/whois/"],
     "intent": "比较多司法管辖区域名注册的KYC、数据保护、制裁合规和争议解决机制差异。"
   }

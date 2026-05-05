@@ -117,5 +117,5 @@ A: 加密支付方式改变了域名注册的资金流转路径，但不改变DN
 - [DNSSEC部署分析](/research/dns-security-governance/dnssec/)
 - [DNS劫持攻击研究](/research/dns-security-governance/dns-hijacking/)
 - [DNS over HTTPS研究](/research/dns-security-governance/dns-over-https/)
-- [进阶：DNSSEC部署实践](/courses/advanced-dnssec-deployment/)
+- [进阶：DNSSEC部署实践](/learn/advanced-dnssec-deployment/)
 - [DNSSEC检查指南](/tools/dnssec-check-guide/)

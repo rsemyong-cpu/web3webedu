@@ -65,23 +65,29 @@ function yaml(data: Record<string, unknown>) {
   return lines.join("\n");
 }
 
-async function aiBody(title: string) {
+async function aiBody(title: string, selectedCluster: Cluster) {
   if (!process.env.OPENAI_API_KEY) return "";
   const prompt = await readFile("prompts/article-generator.md", "utf8");
-  const { default: OpenAI } = await import("openai");
-  const client = new OpenAI();
-  const response = await client.responses.create({
-    model: process.env.OPENAI_MODEL ?? "gpt-5.2",
-    instructions: prompt,
-    input: `主题集群：${cluster.name}\n目标页面标题：${title}\n支柱页：${cluster.pillar}\n工具页：${cluster.tool}\n报告页：${cluster.report}\n请输出正文 Markdown，不要输出 frontmatter。`
-  });
-  return response.output_text;
+  try {
+    const { default: OpenAI } = await import("openai");
+    const client = new OpenAI();
+    const response = await client.responses.create({
+      model: process.env.OPENAI_MODEL ?? "gpt-5.2",
+      instructions: prompt,
+      input: `主题集群：${selectedCluster.name}\n目标页面标题：${title}\n支柱页：${selectedCluster.pillar}\n工具页：${selectedCluster.tool}\n报告页：${selectedCluster.report}\n请输出正文 Markdown，不要输出 frontmatter。`
+    });
+    return response.output_text;
+  } catch (error) {
+    console.warn(`OpenAI generation failed for ${selectedCluster.id}; using local template.`);
+    console.warn(error instanceof Error ? error.message : String(error));
+    return "";
+  }
 }
 
-function deterministicBody(title: string) {
+function deterministicBody(title: string, selectedCluster: Cluster) {
   return `## 摘要
 
-${title} 是 ${cluster.name} 主题集群中的长尾页面，用于回答一个具体问题，并把读者引导到支柱页、工具页、术语页和报告页。
+${title} 是 ${selectedCluster.name} 主题集群中的长尾页面，用于回答一个具体问题，并把读者引导到支柱页、工具页、术语页和报告页。
 
 ## 问题定义
 
@@ -101,65 +107,80 @@ ${title} 是 ${cluster.name} 主题集群中的长尾页面，用于回答一个
 
 ## 相关入口
 
-- [${cluster.name}](${cluster.pillar})
-- [主题工具页](${cluster.tool})
-- [主题报告](${cluster.report})
+- [${selectedCluster.name}](${selectedCluster.pillar})
+- [主题工具页](${selectedCluster.tool})
+- [主题报告](${selectedCluster.report})
 - [USDT术语](/glossary/usdt/)
 - [DNS术语](/glossary/dns/)
 `;
 }
 
-const title = `${cluster.name}自动更新观察：${today}`;
-const slug = `${cluster.id}/generated-${today}`;
-const section = cluster.section;
-const collection = section === "research" ? "research" : "library";
-const body = (await aiBody(title)) || deterministicBody(title);
-
-const frontmatter = {
-  title,
-  description: `${cluster.name}主题集群的自动更新页面，覆盖风险、合规边界、内链入口和后续更新计划。`,
-  slug,
-  section,
-  cluster: cluster.id,
-  type: "longtail",
-  language: "zh-CN",
-  publishedAt: today,
-  updatedAt: today,
-  author: "Web3 Domain Institute Editorial Team",
-  reviewer: "Domain Infrastructure Research Desk",
-  tags: [cluster.name, "自动更新"],
-  keywords: { primary: cluster.name, secondary: [] },
-  riskLevel: "medium",
-  index: true,
-  audience: ["域名持有者", "研究者", "Web3创业者"],
-  summary: `${cluster.name}自动更新页面。`,
-  faqs: [
-    {
-      question: `${cluster.name}页面为什么需要定期更新？`,
-      answer: "注册商政策、稳定币支付、DNS安全和隐私规则都可能变化，定期更新能降低过期信息风险。"
-    }
-  ],
-  references: [
-    { title: "ICANN: Domain Name System (DNS)", url: "https://www.icann.org/resources/pages/what-2012-02-25-en", source: "ICANN" },
-    { title: "ICANN: Registrar Accreditation Agreement", url: "https://www.icann.org/resources/pages/approved-with-specs-2013-09-17-en", source: "ICANN" }
-  ],
-  related: [
-    { title: cluster.name, url: cluster.pillar },
-    { title: "主题工具页", url: cluster.tool },
-    { title: "主题报告", url: cluster.report },
-    { title: "USDT术语", url: "/glossary/usdt/" },
-    { title: "DNS术语", url: "/glossary/dns/" }
-  ],
-  updateCadence: "daily",
-  schemaType: "Article"
-};
-
-const file = path.join("src", "content", collection, `${slugify(cluster.id)}`, `generated-${today}.md`);
-if (args.has("--dry-run")) {
-  console.log(`Would write ${file}`);
-  process.exit(0);
+function frontmatterFor(selectedCluster: Cluster, title: string, slug: string, section: string) {
+  return {
+    title,
+    description: `${selectedCluster.name}主题集群的自动更新页面，覆盖风险、合规边界、内链入口和后续更新计划。`,
+    slug,
+    section,
+    cluster: selectedCluster.id,
+    type: "longtail",
+    language: "zh-CN",
+    publishedAt: today,
+    updatedAt: today,
+    author: "Web3 Domain Institute Editorial Team",
+    reviewer: "Domain Infrastructure Research Desk",
+    tags: [selectedCluster.name, "自动更新"],
+    keywords: { primary: selectedCluster.name, secondary: [] },
+    riskLevel: "medium",
+    index: true,
+    audience: ["域名持有者", "研究者", "Web3创业者"],
+    summary: `${selectedCluster.name}自动更新页面。`,
+    faqs: [
+      {
+        question: `${selectedCluster.name}页面为什么需要定期更新？`,
+        answer: "注册商政策、稳定币支付、DNS安全和隐私规则都可能变化，定期更新能降低过期信息风险。"
+      }
+    ],
+    references: [
+      { title: "ICANN: Domain Name System (DNS)", url: "https://www.icann.org/resources/pages/what-2012-02-25-en", source: "ICANN" },
+      { title: "ICANN: Registrar Accreditation Agreement", url: "https://www.icann.org/resources/pages/approved-with-specs-2013-09-17-en", source: "ICANN" }
+    ],
+    related: [
+      { title: selectedCluster.name, url: selectedCluster.pillar },
+      { title: "主题工具页", url: selectedCluster.tool },
+      { title: "主题报告", url: selectedCluster.report },
+      { title: "USDT术语", url: "/glossary/usdt/" },
+      { title: "DNS术语", url: "/glossary/dns/" }
+    ],
+    updateCadence: "daily",
+    schemaType: "Article"
+  };
 }
 
-await mkdir(path.dirname(file), { recursive: true });
-await writeFile(file, `---\n${yaml(frontmatter)}\n---\n\n${body}\n`, "utf8");
-console.log(`Generated ${file}`);
+const plans = args.has("--cluster")
+  ? [{ cluster: cluster.id, type: "longtail", count: 1 }]
+  : calendar.daily;
+
+for (const plan of plans) {
+  const selectedCluster = topicClusters.find((item) => item.id === plan.cluster);
+  if (!selectedCluster) throw new Error(`Unknown cluster: ${plan.cluster}`);
+
+  for (let index = 0; index < Math.max(1, plan.count); index += 1) {
+    const suffix = index === 0 ? `generated-${today}` : `generated-${today}-${index + 1}`;
+    const titleSuffix = index === 0 ? "" : `（${index + 1}）`;
+    const title = `${selectedCluster.name}自动更新观察：${today}${titleSuffix}`;
+    const slug = `${selectedCluster.id}/${suffix}`;
+    const section = selectedCluster.section;
+    const collection = section === "research" ? "research" : "library";
+    const body = (await aiBody(title, selectedCluster)) || deterministicBody(title, selectedCluster);
+    const file = path.join("src", "content", collection, slugify(selectedCluster.id), `${suffix}.md`);
+
+    if (args.has("--dry-run")) {
+      console.log(`Would write ${file}`);
+      continue;
+    }
+
+    await mkdir(path.dirname(file), { recursive: true });
+    await writeFile(file, `---\n${yaml(frontmatterFor(selectedCluster, title, slug, section))}\n---\n\n${body}\n`, "utf8");
+    console.log(`Generated ${file}`);
+  }
+}

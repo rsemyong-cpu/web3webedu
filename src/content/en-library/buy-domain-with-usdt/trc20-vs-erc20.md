@@ -110,7 +110,7 @@ This page discusses the technical differences between TRC-20 and ERC-20 in domai
 
 - [Complete Guide to Buying Domains with USDT](/en/library/buy-domain-with-usdt/)
 - [Does Buying Domains with USDT Require KYC?](/en/library/buy-domain-with-usdt/kyc/)
-- [Is It Safe to Buy Domains with USDT?](/en/library/buy-domain-with-usdt/is-it-safe/)
-- [USDT Domain Refund Risk](/en/library/buy-domain-with-usdt/refund-risk/)
+- [Is It Safe to Buy Domains with USDT?](/en/library/buy-domain-with-usdt/)
+- [USDT Domain Refund Risk](/en/library/buy-domain-with-usdt/trc20-vs-erc20/)
 - [USDT Domain Risk Checklist](/en/tools/usdt-domain-risk-checklist/)
 - [2026 USDT Domain Report](/en/reports/2026-usdt-domain-report/)

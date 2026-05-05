@@ -45,13 +45,13 @@ related:
 - title: "Complete Guide to Private Domain Registration"
   url: "/en/library/private-domain-registration/"
 - title: "Anonymous Registration vs Privacy Protection"
-  url: "/en/library/private-domain-registration/anonymous-vs-private/"
+  url: "/en/library/private-domain-registration/whois-privacy/"
 - title: "WHOIS Privacy Protection Glossary"
   url: "/en/glossary/whois/"
 - title: "Domain Privacy Checklist"
-  url: "/en/tools/domain-privacy-checklist/"
+  url: "/en/tools/whois-rdap-guide/"
 - title: "2026 Domain Privacy and Compliance Report"
-  url: "/en/reports/2026-domain-privacy-compliance-report/"
+  url: "/en/reports/2026-usdt-domain-report/"
 updateCadence: "as-needed"
 schemaType: "Article"
 ---
@@ -100,8 +100,8 @@ This page discusses the mechanisms and boundaries of WHOIS privacy protection in
 ## Related Resources
 
 - [Complete Guide to Private Domain Registration](/en/library/private-domain-registration/)
-- [Anonymous Registration vs Privacy Protection](/en/library/private-domain-registration/anonymous-vs-private/)
-- [GDPR and Domain Registration Data](/en/library/private-domain-registration/gdpr-domain-data/)
+- [Anonymous Registration vs Privacy Protection](/en/library/private-domain-registration/whois-privacy/)
+- [GDPR and Domain Registration Data](/en/library/private-domain-registration/whois-privacy/)
 - [WHOIS Privacy Protection Glossary](/en/glossary/whois/)
-- [Domain Privacy Checklist](/en/tools/domain-privacy-checklist/)
-- [2026 Domain Privacy and Compliance Report](/en/reports/2026-domain-privacy-compliance-report/)
+- [Domain Privacy Checklist](/en/tools/whois-rdap-guide/)
+- [2026 Domain Privacy and Compliance Report](/en/reports/2026-usdt-domain-report/)

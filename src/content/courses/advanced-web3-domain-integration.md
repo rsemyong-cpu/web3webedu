@@ -49,13 +49,13 @@ references:
 related:
   -
     title: "Web3域名身份完整指南"
-    url: "/library/web3-domain-identity/"
+    url: "/research/web3-domain-identity/"
   -
     title: "ENS开发入门"
-    url: "/courses/ens-development-basics/"
+    url: "/learn/web3-domain-basics/"
   -
     title: "Web3域名集成检查工具"
-    url: "/tools/web3-domain-integration-check/"
+    url: "/tools/crypto-domain-registrar-comparison/"
   -
     title: "Web3域名术语解释"
     url: "/glossary/web3-domain/"

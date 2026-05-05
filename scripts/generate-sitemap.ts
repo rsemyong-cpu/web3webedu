@@ -20,7 +20,9 @@ const staticPages = [
   "/en/tools/",
   "/en/news/",
   "/en/glossary/",
-  "/en/faq/"
+  "/en/faq/",
+  "/en/about/",
+  "/en/people/"
 ];
 
 const groups: Record<string, { url: string; updatedAt: string }[]> = {

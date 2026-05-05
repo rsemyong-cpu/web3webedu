@@ -55,13 +55,13 @@ related:
   url: "/en/library/private-domain-registration/whois-privacy/"
 -
   title: "GDPR and Domain Data"
-  url: "/en/library/private-domain-registration/gdpr-domain-data/"
+  url: "/en/library/private-domain-registration/whois-privacy/"
 -
   title: "DNS Security Governance Research"
   url: "/en/research/dns-security-governance/"
 -
   title: "2026 Domain Privacy Compliance Report"
-  url: "/en/reports/2026-domain-privacy-compliance-report/"
+  url: "/en/reports/2026-usdt-domain-report/"
 updateCadence: "as-needed"
 schemaType: "FAQPage"
 ---
@@ -91,4 +91,4 @@ GDPR restricts the public display of EU registrants' personal data in WHOIS. ICA
 - [Private Domain Registration Guide](/en/library/private-domain-registration/)
 - [Buying Domains with USDT](/en/library/buy-domain-with-usdt/)
 - [DNS Security Governance Research](/en/research/dns-security-governance/)
-- [2026 Domain Privacy Compliance Report](/en/reports/2026-domain-privacy-compliance-report/)
+- [2026 Domain Privacy Compliance Report](/en/reports/2026-usdt-domain-report/)

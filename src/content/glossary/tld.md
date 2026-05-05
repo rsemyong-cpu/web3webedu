@@ -56,7 +56,7 @@ related:
   url: "/library/buy-domain-with-usdt/"
 -
   title: "域名基础课程"
-  url: "/courses/domain-basics/"
+  url: "/learn/domain-basics/"
 updateCadence: "as-needed"
 schemaType: "DefinedTerm"
 ---
@@ -99,4 +99,4 @@ TLD的长期可用性取决于注册局的运营稳定性和ICANN的授权状态
 - [DNS术语](/glossary/dns/)
 - [域名术语](/glossary/domain-name/)
 - [USDT购买域名](/library/buy-domain-with-usdt/)
-- [域名基础课程](/courses/domain-basics/)
+- [域名基础课程](/learn/domain-basics/)

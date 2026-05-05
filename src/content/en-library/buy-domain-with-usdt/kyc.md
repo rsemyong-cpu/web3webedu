@@ -98,7 +98,7 @@ This page discusses the institutional relationship between KYC mechanisms and pr
 
 - [Complete Guide to Buying Domains with USDT](/en/library/buy-domain-with-usdt/)
 - [TRC-20 vs ERC-20 for Domain Payments](/en/library/buy-domain-with-usdt/trc20-vs-erc20/)
-- [Is It Safe to Buy Domains with USDT?](/en/library/buy-domain-with-usdt/is-it-safe/)
-- [USDT Domain Refund Risk](/en/library/buy-domain-with-usdt/refund-risk/)
+- [Is It Safe to Buy Domains with USDT?](/en/library/buy-domain-with-usdt/)
+- [USDT Domain Refund Risk](/en/library/buy-domain-with-usdt/trc20-vs-erc20/)
 - [USDT Domain Risk Checklist](/en/tools/usdt-domain-risk-checklist/)
 - [2026 USDT Domain Report](/en/reports/2026-usdt-domain-report/)

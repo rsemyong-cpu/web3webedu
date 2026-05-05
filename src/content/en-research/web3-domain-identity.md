@@ -54,7 +54,7 @@ related:
   url: "/en/library/buy-domain-with-usdt/"
 -
   title: "NFT Domain Market Research"
-  url: "/en/research/nft-domain-market/"
+  url: "/en/research/web3-domain-identity/"
 -
   title: "DNS Security Governance Research"
   url: "/en/research/dns-security-governance/"
@@ -63,7 +63,7 @@ related:
   url: "/en/faq/web3-domain-identity-faq/"
 -
   title: "2026 Web3 Domain Trends Report"
-  url: "/en/reports/2026-web3-domain-trends/"
+  url: "/en/reports/2026-dns-security-governance-report/"
 updateCadence: "monthly"
 schemaType: "Article"
 ---
@@ -95,7 +95,7 @@ This research is presented for educational purposes. Web3 domain systems operate
 ## Related Resources
 
 - [Buying Domains with USDT](/en/library/buy-domain-with-usdt/)
-- [NFT Domain Market Research](/en/research/nft-domain-market/)
+- [NFT Domain Market Research](/en/research/web3-domain-identity/)
 - [DNS Security Governance Research](/en/research/dns-security-governance/)
 - [Web3 Domain Identity FAQ](/en/faq/web3-domain-identity-faq/)
 - [Private Domain Registration](/en/library/private-domain-registration/)

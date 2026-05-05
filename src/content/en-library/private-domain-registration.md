@@ -63,7 +63,7 @@ related:
   url: "/en/research/dns-security-governance/"
 -
   title: "2026 Domain Privacy Compliance Report"
-  url: "/en/reports/2026-domain-privacy-compliance-report/"
+  url: "/en/reports/2026-usdt-domain-report/"
 updateCadence: "monthly"
 schemaType: "Article"
 ---
@@ -103,7 +103,7 @@ This site presents domain privacy mechanisms for educational and research purpos
 - [Buying Domains with Cryptocurrency](/en/library/buy-domain-with-crypto/)
 - [Private Domain Registration FAQ](/en/faq/private-domain-registration-faq/)
 - [DNS Security Governance Research](/en/research/dns-security-governance/)
-- [2026 Domain Privacy Compliance Report](/en/reports/2026-domain-privacy-compliance-report/)
+- [2026 Domain Privacy Compliance Report](/en/reports/2026-usdt-domain-report/)
 - [Web3 Domain Identity Research](/en/research/web3-domain-identity/)
 
 ## References
