@@ -56,13 +56,13 @@ references:
 related:
   -
     title: "DNS安全治理完整指南"
-    url: "/library/dns-security-governance/"
+    url: "/research/dns-security-governance/"
   -
     title: "DNSSEC基础入门"
-    url: "/courses/dnssec-basics/"
+    url: "/learn/dns-basics/"
   -
     title: "域名安全检查工具"
-    url: "/tools/domain-security-check/"
+    url: "/tools/dnssec-check-guide/"
   -
     title: "DNS术语解释"
     url: "/glossary/dnssec/"

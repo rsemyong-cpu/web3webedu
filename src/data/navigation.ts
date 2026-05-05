@@ -31,11 +31,11 @@ export const enPrimaryNavigation = [
 ];
 
 export const enFooterNavigation = [
-  { label: "Editorial Policy", href: "/en/about/editorial-policy/" },
-  { label: "Disclaimer", href: "/en/about/disclaimer/" },
+  { label: "Research Mission", href: "/en/about/mission/" },
+  { label: "Disclaimer", href: "/en/about/mission/" },
   { label: "Authors", href: "/en/people/" },
-  { label: "Contribute", href: "/en/about/contribute/" },
-  { label: "Risk Disclosure", href: "/en/legal/risk-disclosure/" },
-  { label: "RSS", href: "/rss.xml" },
+  { label: "Contribute", href: "/en/about/mission/" },
+  { label: "Risk Disclosure", href: "/en/about/mission/" },
+  { label: "RSS", href: "/en/rss.xml" },
   { label: "Sitemap", href: "/sitemap.xml" }
 ];

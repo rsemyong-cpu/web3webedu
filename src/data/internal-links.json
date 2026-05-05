@@ -8,7 +8,7 @@
     { "title": "USDT购买域名风险检查清单", "url": "/tools/usdt-domain-risk-checklist/" },
     { "title": "2026 USDT购买域名研究报告", "url": "/reports/2026-usdt-domain-report/" },
     { "title": "USDT购买域名常见问题", "url": "/faq/usdt-domain-registration-faq/" },
-    { "title": "进阶：USDT购买域名支付风险", "url": "/courses/advanced-usdt-domain-payment/" }
+    { "title": "进阶：USDT购买域名支付风险", "url": "/learn/advanced-usdt-domain-payment/" }
   ],
   "buy-domain-with-crypto": [
     { "title": "加密货币购买域名完整指南", "url": "/library/buy-domain-with-crypto/" },
@@ -28,14 +28,14 @@
     { "title": "域名隐私保护检查清单", "url": "/tools/domain-privacy-checklist/" },
     { "title": "2026 域名隐私与合规报告", "url": "/reports/2026-domain-privacy-compliance-report/" },
     { "title": "隐私域名注册常见问题", "url": "/faq/private-domain-registration-faq/" },
-    { "title": "进阶：域名隐私保护与GDPR合规", "url": "/courses/advanced-domain-privacy/" }
+    { "title": "进阶：域名隐私保护与GDPR合规", "url": "/learn/advanced-domain-privacy/" }
   ],
   "web3-domain-identity": [
     { "title": "Web3域名与数字身份研究", "url": "/research/web3-domain-identity/" },
     { "title": "ENS与DNS对比分析", "url": "/research/web3-domain-identity/ens-vs-dns/" },
     { "title": "Unstoppable Domains研究", "url": "/research/web3-domain-identity/unstoppable-domains/" },
     { "title": "Web3域名常见问题", "url": "/faq/web3-domain-identity-faq/" },
-    { "title": "进阶：Web3域名集成开发", "url": "/courses/advanced-web3-domain-integration/" },
+    { "title": "进阶：Web3域名集成开发", "url": "/learn/advanced-web3-domain-integration/" },
     { "title": "2026 Web3域名趋势报告", "url": "/reports/2026-web3-domain-trends/" }
   ],
   "stablecoin-economy": [
@@ -52,7 +52,7 @@
     { "title": "DNS劫持攻击研究", "url": "/research/dns-security-governance/dns-hijacking/" },
     { "title": "DNS over HTTPS研究", "url": "/research/dns-security-governance/dns-over-https/" },
     { "title": "DNS安全常见问题", "url": "/faq/dns-security-faq/" },
-    { "title": "进阶：DNSSEC部署实践", "url": "/courses/advanced-dnssec-deployment/" },
+    { "title": "进阶：DNSSEC部署实践", "url": "/learn/advanced-dnssec-deployment/" },
     { "title": "DNSSEC检查指南", "url": "/tools/dnssec-check-guide/" },
     { "title": "2026 DNS安全与域名治理报告", "url": "/reports/2026-dns-security-governance-report/" }
   ],
@@ -64,7 +64,7 @@
     { "title": "加密支付域名注册商对比", "url": "/tools/crypto-domain-registrar-comparison/" },
     { "title": "2026 CBDC与域名基础设施报告", "url": "/reports/2026-cbdc-domain-report/" },
     { "title": "CBDC域名支付常见问题", "url": "/faq/cbdc-domain-faq/" },
-    { "title": "进阶：CBDC域名支付机制分析", "url": "/courses/advanced-cbdc-domain-payment/" }
+    { "title": "进阶：CBDC域名支付机制分析", "url": "/learn/advanced-cbdc-domain-payment/" }
   ],
   "nft-domain-market": [
     { "title": "NFT域名市场研究", "url": "/research/nft-domain-market/" },
@@ -74,7 +74,7 @@
     { "title": "加密支付域名注册商对比", "url": "/tools/crypto-domain-registrar-comparison/" },
     { "title": "2026 NFT域名市场报告", "url": "/reports/2026-nft-domain-market-report/" },
     { "title": "NFT域名市场常见问题", "url": "/faq/nft-domain-faq/" },
-    { "title": "进阶：NFT域名交易与风险", "url": "/courses/advanced-nft-domain-trading/" }
+    { "title": "进阶：NFT域名交易与风险", "url": "/learn/advanced-nft-domain-trading/" }
   ],
   "cross-border-domain-compliance": [
     { "title": "跨境域名合规研究", "url": "/research/cross-border-domain-compliance/" },
@@ -83,7 +83,7 @@
     { "title": "KYC术语解释", "url": "/glossary/kyc/" },
     { "title": "域名隐私保护检查清单", "url": "/tools/domain-privacy-checklist/" },
     { "title": "2026 跨境域名合规报告", "url": "/reports/2026-cross-border-domain-compliance-report/" },
-    { "title": "跨境域名合规常见问题", "url": "/faq/cross-border-domain-faq/" },
-    { "title": "进阶：跨境域名合规审查", "url": "/courses/advanced-cross-border-compliance/" }
+    { "title": "跨境域名合规常见问题", "url": "/faq/cross-border-domain-compliance-faq/" },
+    { "title": "进阶：跨境域名合规审查", "url": "/learn/advanced-cross-border-domain-compliance/" }
   ]
 }

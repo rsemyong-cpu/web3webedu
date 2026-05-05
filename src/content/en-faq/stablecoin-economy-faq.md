@@ -55,10 +55,10 @@ related:
   url: "/en/library/buy-domain-with-usdt/"
 -
   title: "CBDC Domain Infrastructure Research"
-  url: "/en/research/cbdc-domain-infrastructure/"
+  url: "/en/research/stablecoin-economy/"
 -
   title: "2026 Stablecoin Internet Payments Report"
-  url: "/en/reports/2026-stablecoin-internet-payments/"
+  url: "/en/reports/2026-usdt-domain-report/"
 updateCadence: "as-needed"
 schemaType: "FAQPage"
 ---
@@ -81,8 +81,8 @@ A depegging event occurs when a stablecoin's market price deviates significantly
 
 - [Stablecoin Economy Research](/en/research/stablecoin-economy/)
 - [Buying Domains with USDT](/en/library/buy-domain-with-usdt/)
-- [CBDC Domain Infrastructure Research](/en/research/cbdc-domain-infrastructure/)
+- [CBDC Domain Infrastructure Research](/en/research/stablecoin-economy/)
 - [USDT Domain Registration FAQ](/en/faq/usdt-domain-registration-faq/)
 - [Crypto Domain Payment FAQ](/en/faq/crypto-domain-payment-faq/)
 - [Private Domain Registration](/en/library/private-domain-registration/)
-- [2026 Stablecoin Internet Payments Report](/en/reports/2026-stablecoin-internet-payments/)
+- [2026 Stablecoin Internet Payments Report](/en/reports/2026-usdt-domain-report/)

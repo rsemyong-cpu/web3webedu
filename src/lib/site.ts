@@ -21,11 +21,53 @@ export function localeFromPath(pathname: string): "zh-CN" | "en" {
   return pathname.startsWith("/en/") ? "en" : "zh-CN";
 }
 
-export function altLangPath(pathname: string): string {
+const translatedPaths = new Set([
+  "/",
+  "/learn/",
+  "/research/",
+  "/library/",
+  "/reports/",
+  "/tools/",
+  "/news/",
+  "/glossary/",
+  "/faq/",
+  "/people/",
+  "/about/mission/",
+  "/library/buy-domain-with-crypto/",
+  "/library/buy-domain-with-usdt/",
+  "/library/buy-domain-with-usdt/kyc/",
+  "/library/buy-domain-with-usdt/trc20-vs-erc20/",
+  "/library/private-domain-registration/",
+  "/library/private-domain-registration/whois-privacy/",
+  "/research/dns-security-governance/",
+  "/research/dns-security-governance/dnssec/",
+  "/research/stablecoin-economy/",
+  "/research/stablecoin-economy/stablecoins-and-domain-payments/",
+  "/research/web3-domain-identity/",
+  "/reports/2026-dns-security-governance-report/",
+  "/reports/2026-usdt-domain-report/",
+  "/tools/usdt-domain-risk-checklist/",
+  "/tools/whois-rdap-guide/",
+  "/glossary/ens/",
+  "/glossary/usdt/",
+  "/glossary/whois/",
+  "/faq/crypto-domain-payment-faq/",
+  "/faq/dns-security-faq/",
+  "/faq/private-domain-registration-faq/",
+  "/faq/stablecoin-economy-faq/",
+  "/faq/usdt-domain-registration-faq/",
+  "/faq/web3-domain-identity-faq/",
+  "/learn/domain-basics/",
+  "/learn/usdt-basics/",
+  "/news/weekly-briefing/2026-05-04/"
+]);
+
+export function altLangPath(pathname: string): string | undefined {
   if (pathname.startsWith("/en/")) {
-    return pathname.replace(/^\/en/, "") || "/";
+    const zhPath = pathname.replace(/^\/en/, "") || "/";
+    return translatedPaths.has(zhPath) ? zhPath : undefined;
   }
-  return `/en${pathname}` || "/en/";
+  return translatedPaths.has(pathname) ? `/en${pathname}` : undefined;
 }
 
 export function localeName(locale: "zh-CN" | "en"): string {

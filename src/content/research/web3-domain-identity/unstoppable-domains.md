@@ -69,7 +69,7 @@ schemaType: "Article"
 - [Web3域名与数字身份研究](/research/web3-domain-identity/)
 - [ENS与DNS对比分析](/research/web3-domain-identity/ens-vs-dns/)
 - [Web3域名常见问题](/faq/web3-domain-identity-faq/)
-- [进阶：Web3域名集成开发](/courses/advanced-web3-domain-integration/)
+- [进阶：Web3域名集成开发](/learn/advanced-web3-domain-integration/)
 - [2026 Web3域名趋势报告](/reports/2026-web3-domain-trends/)
 
 

@@ -49,9 +49,9 @@ related:
 - title: "USDT Glossary"
   url: "/en/glossary/usdt/"
 - title: "Crypto Payment Domain Registrar Comparison"
-  url: "/en/tools/crypto-domain-registrar-comparison/"
+  url: "/en/tools/usdt-domain-risk-checklist/"
 - title: "2026 Stablecoin and Internet Payment Infrastructure Report"
-  url: "/en/reports/2026-stablecoin-internet-payments/"
+  url: "/en/reports/2026-usdt-domain-report/"
 updateCadence: "as-needed"
 schemaType: "Article"
 ---
@@ -94,7 +94,7 @@ Stablecoin domain payments must simultaneously satisfy requirements across both 
 ## Related Resources
 
 - [Stablecoin Economic Impact Research](/en/research/stablecoin-economy/)
-- [USDC Domain Payment Analysis](/en/research/stablecoin-economy/usdc-domain-payment/)
-- [CBDC Impact on Domain Payments](/en/research/stablecoin-economy/cbdc-domain-impact/)
+- [USDC Domain Payment Analysis](/en/research/stablecoin-economy/stablecoins-and-domain-payments/)
+- [CBDC Impact on Domain Payments](/en/research/stablecoin-economy/)
 - [Stablecoin and Domain Payment FAQ](/en/faq/stablecoin-economy-faq/)
-- [2026 Stablecoin and Internet Payment Infrastructure Report](/en/reports/2026-stablecoin-internet-payments/)
+- [2026 Stablecoin and Internet Payment Infrastructure Report](/en/reports/2026-usdt-domain-report/)

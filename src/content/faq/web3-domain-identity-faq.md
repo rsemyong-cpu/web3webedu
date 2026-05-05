@@ -122,5 +122,5 @@ A: 选择应基于具体使用场景：若主要在以太坊生态中使用，EN
 - [Web3域名与数字身份研究](/research/web3-domain-identity/)
 - [ENS与DNS对比分析](/research/web3-domain-identity/ens-vs-dns/)
 - [Unstoppable Domains研究](/research/web3-domain-identity/unstoppable-domains/)
-- [进阶：Web3域名集成开发](/courses/advanced-web3-domain-integration/)
+- [进阶：Web3域名集成开发](/learn/advanced-web3-domain-integration/)
 - [2026 Web3域名趋势报告](/reports/2026-web3-domain-trends/)

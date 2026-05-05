@@ -49,9 +49,9 @@ related:
 - title: "Why DNSSEC Matters"
   url: "/en/research/dns-security-governance/dnssec/"
 - title: "DNS Glossary"
-  url: "/en/glossary/dns/"
+  url: "/en/glossary/whois/"
 - title: "DNSSEC Check Guide"
-  url: "/en/tools/dnssec-check-guide/"
+  url: "/en/tools/whois-rdap-guide/"
 - title: "2026 DNS Security and Domain Governance Report"
   url: "/en/reports/2026-dns-security-governance-report/"
 updateCadence: "monthly"
@@ -110,8 +110,8 @@ This article analyzes DNS security threats, defense mechanisms, and governance f
 ## Related Resources
 
 - [DNSSEC Deployment Analysis](/en/research/dns-security-governance/dnssec/)
-- [DNS Hijacking Attack Research](/en/research/dns-security-governance/dns-hijacking/)
-- [DNS over HTTPS Research](/en/research/dns-security-governance/dns-over-https/)
+- [DNS Hijacking Attack Research](/en/research/dns-security-governance/dnssec/)
+- [DNS over HTTPS Research](/en/research/dns-security-governance/dnssec/)
 - [DNS Security FAQ](/en/faq/dns-security-faq/)
-- [Advanced: DNSSEC Deployment Practices](/en/courses/advanced-dnssec-deployment/)
-- [DNSSEC Check Guide](/en/tools/dnssec-check-guide/)
+- [Advanced: DNSSEC Deployment Practices](/en/learn/domain-basics/)
+- [DNSSEC Check Guide](/en/tools/whois-rdap-guide/)

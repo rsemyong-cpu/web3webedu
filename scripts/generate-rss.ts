@@ -13,12 +13,12 @@ const enFiles = allFiles
   .sort((a, b) => new Date(b.data.updatedAt).valueOf() - new Date(a.data.updatedAt).valueOf())
   .slice(0, 80);
 
-function buildRss(items: typeof zhFiles, title: string, description: string, language: string) {
+function buildRss(items: typeof zhFiles, title: string, description: string, language: string, channelPath: string) {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
 <title>${escapeXml(title)}</title>
-<link>${siteUrl("/")}</link>
+<link>${siteUrl(channelPath)}</link>
 <description>${escapeXml(description)}</description>
 <language>${language}</language>
 <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
@@ -39,7 +39,7 @@ ${items
 }
 
 await mkdir(dirname("public/rss.xml"), { recursive: true });
-await writeFile("public/rss.xml", buildRss(zhFiles, "Web3 Domain Institute", "Web3域名与稳定币研究学院最新内容", "zh-CN"), "utf8");
+await writeFile("public/rss.xml", buildRss(zhFiles, "Web3 Domain Institute", "Web3域名与稳定币研究学院最新内容", "zh-CN", "/"), "utf8");
 await mkdir(dirname("public/en/rss.xml"), { recursive: true });
-await writeFile("public/en/rss.xml", buildRss(enFiles, "Web3 Domain & Stablecoin Institute", "Latest content from the Web3 Domain & Stablecoin Institute", "en"), "utf8");
+await writeFile("public/en/rss.xml", buildRss(enFiles, "Web3 Domain & Stablecoin Institute", "Latest content from the Web3 Domain & Stablecoin Institute", "en", "/en/"), "utf8");
 console.log(`Generated RSS with ${zhFiles.length} zh-CN + ${enFiles.length} en entries.`);

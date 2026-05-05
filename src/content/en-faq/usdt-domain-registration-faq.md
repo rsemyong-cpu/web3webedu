@@ -58,13 +58,13 @@ related:
   url: "/en/library/buy-domain-with-usdt/"
 -
   title: "USDT Domain Safety Assessment"
-  url: "/en/library/buy-domain-with-usdt/is-it-safe/"
+  url: "/en/library/buy-domain-with-usdt/"
 -
   title: "TRC-20 vs ERC-20 Comparison"
   url: "/en/library/buy-domain-with-usdt/trc20-vs-erc20/"
 -
   title: "USDT Refund Risk"
-  url: "/en/library/buy-domain-with-usdt/refund-risk/"
+  url: "/en/library/buy-domain-with-usdt/trc20-vs-erc20/"
 -
   title: "2026 USDT Domain Report"
   url: "/en/reports/2026-usdt-domain-report/"

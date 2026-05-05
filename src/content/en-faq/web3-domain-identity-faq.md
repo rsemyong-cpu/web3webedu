@@ -52,10 +52,10 @@ related:
   url: "/en/research/web3-domain-identity/"
 -
   title: "ENS vs DNS Comparison"
-  url: "/en/research/web3-domain-identity/ens-vs-dns/"
+  url: "/en/research/web3-domain-identity/"
 -
   title: "NFT Domain Market Research"
-  url: "/en/research/nft-domain-market/"
+  url: "/en/research/web3-domain-identity/"
 -
   title: "Buying Domains with USDT"
   url: "/en/library/buy-domain-with-usdt/"
@@ -80,9 +80,9 @@ ENS operates entirely on-chain through Ethereum smart contracts, while DNS relie
 ## Related Resources
 
 - [Web3 Domain Identity Research](/en/research/web3-domain-identity/)
-- [NFT Domain Market Research](/en/research/nft-domain-market/)
+- [NFT Domain Market Research](/en/research/web3-domain-identity/)
 - [Buying Domains with USDT](/en/library/buy-domain-with-usdt/)
-- [ENS vs DNS Comparison](/en/research/web3-domain-identity/ens-vs-dns/)
+- [ENS vs DNS Comparison](/en/research/web3-domain-identity/)
 - [Buying Domains with Crypto](/en/library/buy-domain-with-crypto/)
 - [DNS Security Governance Research](/en/research/dns-security-governance/)
 - [Web3 Domain Identity FAQ](/en/faq/web3-domain-identity-faq/)

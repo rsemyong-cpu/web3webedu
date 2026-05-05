@@ -45,11 +45,11 @@ related:
   - title: "Private Domain Registration Guide"
     url: "/en/library/private-domain-registration/"
   - title: "Anonymous vs Private Registration"
-    url: "/en/library/private-domain-registration/anonymous-vs-private/"
+    url: "/en/library/private-domain-registration/whois-privacy/"
   - title: "WHOIS Glossary"
     url: "/en/glossary/whois/"
   - title: "Domain Privacy Checklist"
-    url: "/en/tools/domain-privacy-checklist/"
+    url: "/en/tools/whois-rdap-guide/"
   - title: "USDT Domain Risk Checklist"
     url: "/en/tools/usdt-domain-risk-checklist/"
 updateCadence: "weekly"
@@ -86,9 +86,9 @@ WHOIS/RDAP query results must not be used for harassment, doxing, spam, abuse, o
 ## Related Resources
 
 - [Private Domain Registration Guide](/en/library/private-domain-registration/)
-- [Anonymous vs Private Registration](/en/library/private-domain-registration/anonymous-vs-private/)
+- [Anonymous vs Private Registration](/en/library/private-domain-registration/whois-privacy/)
 - [WHOIS Glossary](/en/glossary/whois/)
-- [Domain Privacy Checklist](/en/tools/domain-privacy-checklist/)
+- [Domain Privacy Checklist](/en/tools/whois-rdap-guide/)
 - [USDT Domain Risk Checklist](/en/tools/usdt-domain-risk-checklist/)
 
 ## References

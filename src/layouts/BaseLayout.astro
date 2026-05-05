@@ -46,9 +46,11 @@ const altPath = altLangPath(currentPath);
       <nav class="primary-nav" aria-label={isEn ? "Primary navigation" : "主导航"}>
         {nav.map((item) => <a href={item.href}>{item.label}</a>)}
       </nav>
-      <a class="lang-switch" href={altPath} hreflang={isEn ? "zh-CN" : "en"} rel="alternate">
-        {localeName(isEn ? "zh-CN" : "en" as any)}
-      </a>
+      {altPath && (
+        <a class="lang-switch" href={altPath} hreflang={isEn ? "zh-CN" : "en"} rel="alternate">
+          {localeName(isEn ? "zh-CN" : "en" as any)}
+        </a>
+      )}
     </div>
   </header>
   <main id="main" class="site-main">

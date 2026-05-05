@@ -46,9 +46,9 @@ related:
   - title: "Private Domain Registration Guide"
     url: "/en/library/private-domain-registration/"
   - title: "Editorial Policy"
-    url: "/en/about/editorial-policy/"
+    url: "/en/about/mission/"
   - title: "Risk Disclosure"
-    url: "/en/legal/risk-disclosure/"
+    url: "/en/about/mission/"
   - title: "Authors and Editorial Team"
     url: "/en/people/"
 updateCadence: "as-needed"
@@ -71,8 +71,8 @@ All core pages should be checked for title, description, URL, FAQ, risk disclosu
 
 - [Complete Guide to Buying Domains with USDT](/en/library/buy-domain-with-usdt/)
 - [Private Domain Registration Guide](/en/library/private-domain-registration/)
-- [Editorial Policy](/en/about/editorial-policy/)
-- [Risk Disclosure](/en/legal/risk-disclosure/)
+- [Editorial Policy](/en/about/mission/)
+- [Risk Disclosure](/en/about/mission/)
 - [Authors and Editorial Team](/en/people/)
 - [USDT Glossary](/en/glossary/usdt/)
-- [Crypto Domain Registrar Comparison](/en/tools/crypto-domain-registrar-comparison/)
+- [Crypto Domain Registrar Comparison](/en/tools/usdt-domain-risk-checklist/)
