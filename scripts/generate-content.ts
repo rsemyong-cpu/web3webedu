@@ -156,7 +156,7 @@ function frontmatterFor(selectedCluster: Cluster, title: string, slug: string, s
   };
 }
 
-const plans = args.has("--cluster")
+const plans = process.argv.some((arg) => arg.startsWith("--cluster="))
   ? [{ cluster: cluster.id, type: "longtail", count: 1 }]
   : calendar.daily;
 
