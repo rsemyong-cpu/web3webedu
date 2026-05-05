@@ -6,23 +6,43 @@ const DATE = "2026-05-04";
 const AUTHOR = "Web3 Domain Institute Editorial Team";
 const REVIEWER = "Domain Infrastructure Research Desk";
 
-const commonRefs = [
-  {
-    title: "Google Search Central SEO Starter Guide",
-    url: "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
-    source: "Google for Developers"
-  },
-  {
-    title: "Google URL Structure Guidelines",
-    url: "https://developers.google.com/search/docs/crawling-indexing/url-structure",
-    source: "Google for Developers"
-  },
-  {
-    title: "ICANN: What is DNS?",
-    url: "https://www.icann.org/resources/pages/what-2012-02-25-en",
-    source: "ICANN"
-  }
-];
+const clusterRefs = {
+  "buy-domain-with-usdt": [
+    { title: "ICANN: Domain Name System (DNS)", url: "https://www.icann.org/resources/pages/what-2012-02-25-en", source: "ICANN" },
+    { title: "Tether: USDT Transparency", url: "https://tether.to/en/transparency", source: "Tether" },
+    { title: "ICANN: Registrar Accreditation Agreement", url: "https://www.icann.org/resources/pages/approved-with-specs-2013-09-17-en", source: "ICANN" }
+  ],
+  "buy-domain-with-crypto": [
+    { title: "ICANN: Domain Name System (DNS)", url: "https://www.icann.org/resources/pages/what-2012-02-25-en", source: "ICANN" },
+    { title: "ICANN: Registrar Accreditation Agreement", url: "https://www.icann.org/resources/pages/approved-with-specs-2013-09-17-en", source: "ICANN" },
+    { title: "FATF: Updated Guidance on Virtual Assets", url: "https://www.fatf-gafi.org/en/publications/Fatfguidance/Updated-Guidance-Virtual-Assets.html", source: "FATF" }
+  ],
+  "private-domain-registration": [
+    { title: "ICANN: WHOIS Data Reminders", url: "https://www.icann.org/resources/pages/whois-data-reminders-2018-01-17-en", source: "ICANN" },
+    { title: "ICANN: Registration Data Access Protocol (RDAP)", url: "https://www.icann.org/rdap", source: "ICANN" },
+    { title: "GDPR: Official Regulation Text", url: "https://gdpr-info.eu/", source: "EU" }
+  ],
+  "web3-domain-identity": [
+    { title: "Ethereum Name Service (ENS): Documentation", url: "https://docs.ens.domains/", source: "ENS" },
+    { title: "ICANN: Domain Name System (DNS)", url: "https://www.icann.org/resources/pages/what-2012-02-25-en", source: "ICANN" },
+    { title: "Unstoppable Domains: Overview", url: "https://unstoppabledomains.com/", source: "Unstoppable Domains" }
+  ],
+  "stablecoin-economy": [
+    { title: "Tether: USDT Transparency", url: "https://tether.to/en/transparency", source: "Tether" },
+    { title: "FATF: Updated Guidance on Virtual Assets", url: "https://www.fatf-gafi.org/en/publications/Fatfguidance/Updated-Guidance-Virtual-Assets.html", source: "FATF" },
+    { title: "BIS: Stablecoins and Central Bank Digital Currencies", url: "https://www.bis.org/topics/stablecoins.htm", source: "BIS" }
+  ],
+  "dns-security-governance": [
+    { title: "ICANN: Domain Name System (DNS)", url: "https://www.icann.org/resources/pages/what-2012-02-25-en", source: "ICANN" },
+    { title: "ICANN: DNSSEC – What Is It and Why Is It Important?", url: "https://www.icann.org/resources/pages/dnssec-what-is-it-and-why-is-it-important-2019-02-21-en", source: "ICANN" },
+    { title: "NIST: Secure Domain Name System (DNS) Deployment Guide", url: "https://csrc.nist.gov/publications/detail/sp/800-81/rev-1/final", source: "NIST" }
+  ],
+  "site-policy": [
+    { title: "ICANN: Domain Name System (DNS)", url: "https://www.icann.org/resources/pages/what-2012-02-25-en", source: "ICANN" },
+    { title: "ICANN: Registrar Accreditation Agreement", url: "https://www.icann.org/resources/pages/approved-with-specs-2013-09-17-en", source: "ICANN" },
+    { title: "GDPR: Official Regulation Text", url: "https://gdpr-info.eu/", source: "EU" }
+  ]
+};
 
 const clusterLinks = {
   "buy-domain-with-usdt": [
@@ -238,7 +258,7 @@ ${focus}
 
 ## 问题定义
 
-本页讨论的核心问题是：在域名注册、续费、转移或研究场景中，如何理解相关支付方式、隐私保护、DNS 安全和合规边界。页面面向站长、研究者、创业团队和技术人员。
+本页讨论的核心问题是：在域名注册、续费、转移或研究场景中，如何理解相关支付方式、隐私保护、DNS 安全和合规边界。页面面向域名持有者、研究者、创业团队和技术人员。
 
 ## 背景知识
 
@@ -757,19 +777,19 @@ function normalizeItem(item) {
     keywords: item.keywords ?? keywords(item.title),
     riskLevel: item.riskLevel ?? "medium",
     index: true,
-    audience: ["站长", "研究者", "Web3创业者", "技术人员"],
+    audience: ["域名持有者", "研究者", "Web3创业者", "技术人员"],
     summary: item.focus ?? item.description,
     faqs: [
       {
         question: `${item.title}适合谁阅读？`,
-        answer: "适合需要理解域名注册、加密支付、隐私保护、DNS安全或稳定币基础设施的研究者、站长和创业团队。"
+        answer: "适合需要理解域名注册、加密支付、隐私保护、DNS安全或稳定币基础设施的研究者、域名持有者和创业团队。"
       },
       {
         question: "页面内容是否构成投资或法律建议？",
         answer: "不构成。页面仅用于教育研究和资料整理，具体决策应结合注册商条款、适用法律和专业意见。"
       }
     ],
-    references: commonRefs,
+    references: clusterRefs[cluster] || clusterRefs["site-policy"],
     related: related(cluster),
     updateCadence:
       item.type === "pillar" ? "monthly" : item.type === "tool" ? "weekly" : item.type === "report" ? "quarterly" : "as-needed",

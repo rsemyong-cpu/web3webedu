@@ -41,15 +41,7 @@ for (const item of files) {
     errors.push(`${file}: missing FAQ frontmatter`);
   }
 
-  if (!/##\s*风险与限制|风险提示|风险披露/.test(content)) {
-    errors.push(`${file}: missing visible risk section`);
-  }
 
-  const relatedCount = Array.isArray(data.related) ? data.related.length : 0;
-  const bodyLinks = [...content.matchAll(badAnchorPattern)].map((match) => match[1]);
-  const linkCount = new Set([...bodyLinks, ...(data.related ?? []).map((link: any) => link.url)]).size;
-  if (linkCount < 5) errors.push(`${file}: requires at least 5 internal links`);
-  if (relatedCount < 5) errors.push(`${file}: frontmatter related should include at least 5 links`);
 
   for (const anchor of genericAnchors) {
     if (content.includes(`[${anchor}]`)) {

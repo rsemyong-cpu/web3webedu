@@ -4,6 +4,16 @@
       "cluster": "buy-domain-with-usdt",
       "type": "longtail",
       "count": 1
+    },
+    {
+      "cluster": "buy-domain-with-crypto",
+      "type": "longtail",
+      "count": 1
+    },
+    {
+      "cluster": "private-domain-registration",
+      "type": "longtail",
+      "count": 1
     }
   ],
   "weekly": [
@@ -14,16 +24,28 @@
     {
       "task": "publish_weekly_briefing",
       "section": "news"
+    },
+    {
+      "task": "refresh_faq_pages",
+      "section": "faq"
     }
   ],
   "monthly": [
     {
       "task": "refresh_pillar_pages"
+    },
+    {
+      "task": "update_risk_checklists",
+      "paths": ["/tools/usdt-domain-risk-checklist/", "/tools/domain-privacy-checklist/"]
     }
   ],
   "quarterly": [
     {
       "task": "generate_research_report"
+    },
+    {
+      "task": "review_glossary_accuracy",
+      "section": "glossary"
     }
   ]
 }

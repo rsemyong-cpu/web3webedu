@@ -131,7 +131,7 @@ const frontmatter = {
   keywords: { primary: cluster.name, secondary: [] },
   riskLevel: "medium",
   index: true,
-  audience: ["站长", "研究者", "Web3创业者"],
+  audience: ["域名持有者", "研究者", "Web3创业者"],
   summary: `${cluster.name}自动更新页面。`,
   faqs: [
     {
@@ -140,11 +140,8 @@ const frontmatter = {
     }
   ],
   references: [
-    {
-      title: "Google Search Central SEO Starter Guide",
-      url: "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
-      source: "Google for Developers"
-    }
+    { title: "ICANN: Domain Name System (DNS)", url: "https://www.icann.org/resources/pages/what-2012-02-25-en", source: "ICANN" },
+    { title: "ICANN: Registrar Accreditation Agreement", url: "https://www.icann.org/resources/pages/approved-with-specs-2013-09-17-en", source: "ICANN" }
   ],
   related: [
     { title: cluster.name, url: cluster.pillar },

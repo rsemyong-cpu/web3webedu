@@ -4,8 +4,16 @@
     "name": "USDT购买域名",
     "section": "library",
     "pillar": "/library/buy-domain-with-usdt/",
+    "subpages": [
+      "/library/buy-domain-with-usdt/kyc/",
+      "/library/buy-domain-with-usdt/trc20-vs-erc20/",
+      "/library/buy-domain-with-usdt/is-it-safe/",
+      "/library/buy-domain-with-usdt/refund-risk/"
+    ],
     "tool": "/tools/usdt-domain-risk-checklist/",
     "report": "/reports/2026-usdt-domain-report/",
+    "faq": "/faq/usdt-domain-registration-faq/",
+    "course": "/courses/advanced-usdt-domain-payment/",
     "glossary": ["/glossary/usdt/", "/glossary/domain-name/"],
     "intent": "解释USDT购买域名的流程、风险、合规边界和注册商评估方法。"
   },
@@ -14,18 +22,31 @@
     "name": "加密货币购买域名",
     "section": "library",
     "pillar": "/library/buy-domain-with-crypto/",
+    "subpages": [
+      "/library/buy-domain-with-crypto/btc-vs-usdt/",
+      "/library/buy-domain-with-crypto/eth-domain-payment/",
+      "/library/buy-domain-with-crypto/sol-domain-payment/"
+    ],
     "tool": "/tools/crypto-domain-registrar-comparison/",
     "report": "/reports/2026-crypto-domain-registrar-observatory/",
-    "glossary": ["/glossary/usdt/", "/glossary/domain-name/"],
-    "intent": "比较USDT、BTC、USDC等加密支付方式在域名注册中的差异。"
+    "faq": "/faq/crypto-domain-payment-faq/",
+    "glossary": ["/glossary/usdt/", "/glossary/domain-name/", "/glossary/erc20/", "/glossary/gas-fee/"],
+    "intent": "比较USDT、BTC、ETH、SOL等加密支付方式在域名注册中的差异。"
   },
   {
     "id": "private-domain-registration",
     "name": "隐私域名注册",
     "section": "library",
     "pillar": "/library/private-domain-registration/",
+    "subpages": [
+      "/library/private-domain-registration/anonymous-vs-private/",
+      "/library/private-domain-registration/whois-privacy/",
+      "/library/private-domain-registration/gdpr-domain-data/"
+    ],
     "tool": "/tools/domain-privacy-checklist/",
     "report": "/reports/2026-domain-privacy-compliance-report/",
+    "faq": "/faq/private-domain-registration-faq/",
+    "course": "/courses/advanced-domain-privacy/",
     "glossary": ["/glossary/whois/", "/glossary/rdap/"],
     "intent": "用合规语言覆盖匿名购买域名相关需求，强调WHOIS隐私、边界和风险。"
   },
@@ -34,9 +55,15 @@
     "name": "Web3域名与数字身份",
     "section": "research",
     "pillar": "/research/web3-domain-identity/",
+    "subpages": [
+      "/research/web3-domain-identity/ens-vs-dns/",
+      "/research/web3-domain-identity/unstoppable-domains/"
+    ],
     "tool": "/tools/crypto-domain-registrar-comparison/",
     "report": "/reports/2026-web3-domain-trends/",
-    "glossary": ["/glossary/web3-domain/", "/glossary/dns/"],
+    "faq": "/faq/web3-domain-identity-faq/",
+    "course": "/courses/advanced-web3-domain-integration/",
+    "glossary": ["/glossary/web3-domain/", "/glossary/dns/", "/glossary/ens/"],
     "intent": "研究Web3域名、钱包地址、品牌保护和传统DNS之间的关系。"
   },
   {
@@ -44,8 +71,14 @@
     "name": "稳定币经济影响",
     "section": "research",
     "pillar": "/research/stablecoin-economy/",
+    "subpages": [
+      "/research/stablecoin-economy/stablecoins-and-domain-payments/",
+      "/research/stablecoin-economy/usdc-domain-payment/",
+      "/research/stablecoin-economy/cbdc-domain-impact/"
+    ],
     "tool": "/tools/crypto-domain-registrar-comparison/",
     "report": "/reports/2026-stablecoin-internet-payments/",
+    "faq": "/faq/stablecoin-economy-faq/",
     "glossary": ["/glossary/usdt/", "/glossary/stablecoin/"],
     "intent": "以研究视角解释稳定币支付、跨境结算和互联网基础设施采购。"
   },
@@ -54,8 +87,15 @@
     "name": "DNS安全与域名治理",
     "section": "research",
     "pillar": "/research/dns-security-governance/",
+    "subpages": [
+      "/research/dns-security-governance/dnssec/",
+      "/research/dns-security-governance/dns-hijacking/",
+      "/research/dns-security-governance/dns-over-https/"
+    ],
     "tool": "/tools/dnssec-check-guide/",
     "report": "/reports/2026-dns-security-governance-report/",
+    "faq": "/faq/dns-security-faq/",
+    "course": "/courses/advanced-dnssec-deployment/",
     "glossary": ["/glossary/dns/", "/glossary/dnssec/"],
     "intent": "把站点从支付教程扩展到互联网基础设施、安全和治理研究。"
   }

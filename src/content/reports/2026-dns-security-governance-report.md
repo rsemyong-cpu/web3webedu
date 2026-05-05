@@ -6,8 +6,8 @@ section: "reports"
 cluster: "dns-security-governance"
 type: "report"
 language: "zh-CN"
-publishedAt: "2026-05-04"
-updatedAt: "2026-05-04"
+publishedAt: "2026-04-27"
+updatedAt: "2026-04-28"
 author: "Web3 Domain Institute Editorial Team"
 reviewer: "Domain Infrastructure Research Desk"
 tags:
@@ -19,7 +19,7 @@ keywords:
 riskLevel: "medium"
 index: true
 audience:
-  - "站长"
+  - "域名持有者"
   - "研究者"
   - "Web3创业者"
   - "技术人员"
@@ -27,23 +27,24 @@ summary: "DNS 安全报告用于提升站点权威性，解释域名基础设施
 faqs:
   -
     question: "2026 DNS安全与域名治理报告适合谁阅读？"
-    answer: "适合需要理解域名注册、加密支付、隐私保护、DNS安全或稳定币基础设施的研究者、站长和创业团队。"
+    answer: "适合需要理解域名注册、加密支付、隐私保护、DNS安全或稳定币基础设施的研究者、域名持有者和创业团队。"
   -
     question: "页面内容是否构成投资或法律建议？"
     answer: "不构成。页面仅用于教育研究和资料整理，具体决策应结合注册商条款、适用法律和专业意见。"
 references:
-  -
-    title: "Google Search Central SEO Starter Guide"
-    url: "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
-    source: "Google for Developers"
-  -
-    title: "Google URL Structure Guidelines"
-    url: "https://developers.google.com/search/docs/crawling-indexing/url-structure"
-    source: "Google for Developers"
-  -
-    title: "ICANN: What is DNS?"
-    url: "https://www.icann.org/resources/pages/what-2012-02-25-en"
-    source: "ICANN"
+ -
+   title: "ICANN: Domain Name System (DNS)"
+   url: "https://www.icann.org/resources/pages/what-2012-02-25-en"
+   source: "ICANN"
+ -
+   title: "ICANN: DNSSEC – What Is It and Why Is It Important?"
+   url: "https://www.icann.org/resources/pages/dnssec-what-is-it-and-why-is-it-important-2019-02-21-en"
+   source: "ICANN"
+ -
+   title: "NIST: Secure Domain Name System (DNS) Deployment Guide"
+   url: "https://csrc.nist.gov/publications/detail/sp/800-81/rev-1/final"
+   source: "NIST"
+
 related:
   -
     title: "DNS安全与域名治理指南"

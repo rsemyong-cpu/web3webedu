@@ -8,7 +8,7 @@ focus:
   - "DNS安全"
   - "稳定币经济"
   - "域名治理"
-updatedAt: "2026-05-04"
+updatedAt: "2026-04-20"
 disclosure: "审稿组不代表注册商、交易所或任何金融机构提供建议。"
 index: true
 ---

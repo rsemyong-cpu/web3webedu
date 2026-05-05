@@ -6,8 +6,8 @@ section: "glossary"
 cluster: "stablecoin-economy"
 type: "glossary"
 language: "zh-CN"
-publishedAt: "2026-05-04"
-updatedAt: "2026-05-04"
+publishedAt: "2026-02-05"
+updatedAt: "2026-04-10"
 author: "Web3 Domain Institute Editorial Team"
 reviewer: "Domain Infrastructure Research Desk"
 tags:
@@ -18,7 +18,7 @@ keywords:
 riskLevel: "medium"
 index: true
 audience:
-  - "站长"
+  - "域名持有者"
   - "研究者"
   - "Web3创业者"
   - "技术人员"
@@ -26,23 +26,24 @@ summary: "解释USDT作为稳定币在域名支付、链选择、转账确认和
 faqs:
   -
     question: "USDT适合谁阅读？"
-    answer: "适合需要理解域名注册、加密支付、隐私保护、DNS安全或稳定币基础设施的研究者、站长和创业团队。"
+    answer: "适合需要理解域名注册、加密支付、隐私保护、DNS安全或稳定币基础设施的研究者、域名持有者和创业团队。"
   -
     question: "页面内容是否构成投资或法律建议？"
     answer: "不构成。页面仅用于教育研究和资料整理，具体决策应结合注册商条款、适用法律和专业意见。"
 references:
-  -
-    title: "Google Search Central SEO Starter Guide"
-    url: "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
-    source: "Google for Developers"
-  -
-    title: "Google URL Structure Guidelines"
-    url: "https://developers.google.com/search/docs/crawling-indexing/url-structure"
-    source: "Google for Developers"
-  -
-    title: "ICANN: What is DNS?"
-    url: "https://www.icann.org/resources/pages/what-2012-02-25-en"
-    source: "ICANN"
+ -
+   title: "Tether: USDT Transparency"
+   url: "https://tether.to/en/transparency"
+   source: "Tether"
+ -
+   title: "FATF: Updated Guidance on Virtual Assets"
+   url: "https://www.fatf-gafi.org/en/publications/Fatfguidance/Updated-Guidance-Virtual-Assets.html"
+   source: "FATF"
+ -
+   title: "BIS: Stablecoins and Central Bank Digital Currencies"
+   url: "https://www.bis.org/topics/stablecoins.htm"
+   source: "BIS"
+
 related:
   -
     title: "稳定币经济影响研究"

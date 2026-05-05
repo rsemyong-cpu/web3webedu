@@ -3,14 +3,57 @@
     { "title": "USDT购买域名完整指南", "url": "/library/buy-domain-with-usdt/" },
     { "title": "USDT购买域名是否需要KYC", "url": "/library/buy-domain-with-usdt/kyc/" },
     { "title": "TRC20和ERC20支付区别", "url": "/library/buy-domain-with-usdt/trc20-vs-erc20/" },
+    { "title": "USDT购买域名安全吗", "url": "/library/buy-domain-with-usdt/is-it-safe/" },
+    { "title": "USDT购买域名退款风险", "url": "/library/buy-domain-with-usdt/refund-risk/" },
     { "title": "USDT购买域名风险检查清单", "url": "/tools/usdt-domain-risk-checklist/" },
-    { "title": "2026 USDT购买域名研究报告", "url": "/reports/2026-usdt-domain-report/" }
+    { "title": "2026 USDT购买域名研究报告", "url": "/reports/2026-usdt-domain-report/" },
+    { "title": "USDT购买域名常见问题", "url": "/faq/usdt-domain-registration-faq/" },
+    { "title": "进阶：USDT购买域名支付风险", "url": "/courses/advanced-usdt-domain-payment/" }
+  ],
+  "buy-domain-with-crypto": [
+    { "title": "加密货币购买域名完整指南", "url": "/library/buy-domain-with-crypto/" },
+    { "title": "USDT vs BTC购买域名", "url": "/library/buy-domain-with-crypto/btc-vs-usdt/" },
+    { "title": "ETH支付域名注册", "url": "/library/buy-domain-with-crypto/eth-domain-payment/" },
+    { "title": "SOL支付域名注册", "url": "/library/buy-domain-with-crypto/sol-domain-payment/" },
+    { "title": "加密支付域名注册商对比", "url": "/tools/crypto-domain-registrar-comparison/" },
+    { "title": "2026 加密货币域名注册商观察", "url": "/reports/2026-crypto-domain-registrar-observatory/" },
+    { "title": "加密货币购买域名常见问题", "url": "/faq/crypto-domain-payment-faq/" }
   ],
   "private-domain-registration": [
     { "title": "隐私域名注册完整指南", "url": "/library/private-domain-registration/" },
     { "title": "匿名注册和隐私保护的区别", "url": "/library/private-domain-registration/anonymous-vs-private/" },
-    { "title": "WHOIS隐私保护", "url": "/glossary/whois/" },
+    { "title": "WHOIS隐私保护详解", "url": "/library/private-domain-registration/whois-privacy/" },
+    { "title": "GDPR与域名注册数据", "url": "/library/private-domain-registration/gdpr-domain-data/" },
+    { "title": "WHOIS隐私保护术语", "url": "/glossary/whois/" },
     { "title": "域名隐私保护检查清单", "url": "/tools/domain-privacy-checklist/" },
-    { "title": "2026 域名隐私与合规报告", "url": "/reports/2026-domain-privacy-compliance-report/" }
+    { "title": "2026 域名隐私与合规报告", "url": "/reports/2026-domain-privacy-compliance-report/" },
+    { "title": "隐私域名注册常见问题", "url": "/faq/private-domain-registration-faq/" },
+    { "title": "进阶：域名隐私保护与GDPR合规", "url": "/courses/advanced-domain-privacy/" }
+  ],
+  "web3-domain-identity": [
+    { "title": "Web3域名与数字身份研究", "url": "/research/web3-domain-identity/" },
+    { "title": "ENS与DNS对比分析", "url": "/research/web3-domain-identity/ens-vs-dns/" },
+    { "title": "Unstoppable Domains研究", "url": "/research/web3-domain-identity/unstoppable-domains/" },
+    { "title": "Web3域名常见问题", "url": "/faq/web3-domain-identity-faq/" },
+    { "title": "进阶：Web3域名集成开发", "url": "/courses/advanced-web3-domain-integration/" },
+    { "title": "2026 Web3域名趋势报告", "url": "/reports/2026-web3-domain-trends/" }
+  ],
+  "stablecoin-economy": [
+    { "title": "稳定币经济影响研究", "url": "/research/stablecoin-economy/" },
+    { "title": "稳定币与域名支付", "url": "/research/stablecoin-economy/stablecoins-and-domain-payments/" },
+    { "title": "USDC购买域名分析", "url": "/research/stablecoin-economy/usdc-domain-payment/" },
+    { "title": "CBDC对域名支付的影响", "url": "/research/stablecoin-economy/cbdc-domain-impact/" },
+    { "title": "稳定币与域名支付常见问题", "url": "/faq/stablecoin-economy-faq/" },
+    { "title": "2026 稳定币与互联网支付基础设施报告", "url": "/reports/2026-stablecoin-internet-payments/" }
+  ],
+  "dns-security-governance": [
+    { "title": "DNS安全与域名治理研究", "url": "/research/dns-security-governance/" },
+    { "title": "DNSSEC部署分析", "url": "/research/dns-security-governance/dnssec/" },
+    { "title": "DNS劫持攻击研究", "url": "/research/dns-security-governance/dns-hijacking/" },
+    { "title": "DNS over HTTPS研究", "url": "/research/dns-security-governance/dns-over-https/" },
+    { "title": "DNS安全常见问题", "url": "/faq/dns-security-faq/" },
+    { "title": "进阶：DNSSEC部署实践", "url": "/courses/advanced-dnssec-deployment/" },
+    { "title": "DNSSEC检查指南", "url": "/tools/dnssec-check-guide/" },
+    { "title": "2026 DNS安全与域名治理报告", "url": "/reports/2026-dns-security-governance-report/" }
   ]
 }
