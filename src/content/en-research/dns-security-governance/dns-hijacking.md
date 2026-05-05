@@ -49,6 +49,8 @@ related:
   url: "/en/research/dns-security-governance/dnssec/"
 - title: "2026 DNS Security Governance Report"
   url: "/en/reports/2026-dns-security-governance-report/"
+- title: "WHOIS Glossary"
+  url: "/en/glossary/whois/"
 - title: "Private Domain Registration Guide"
   url: "/en/library/private-domain-registration/"
 - title: "WHOIS/RDAP Query Guide"
@@ -84,6 +86,7 @@ This page is educational research about defensive DNS security. It does not prov
 - [DNS Security Governance Research](/en/research/dns-security-governance/)
 - [Why DNSSEC Matters](/en/research/dns-security-governance/dnssec/)
 - [2026 DNS Security Governance Report](/en/reports/2026-dns-security-governance-report/)
+- [WHOIS Glossary](/en/glossary/whois/)
 - [Private Domain Registration Guide](/en/library/private-domain-registration/)
 - [WHOIS/RDAP Query Guide](/en/tools/whois-rdap-guide/)
 
