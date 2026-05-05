@@ -55,7 +55,7 @@ related:
   url: "/en/research/dns-security-governance/dnssec/"
 -
   title: "DNS Hijacking Prevention"
-  url: "/en/research/dns-security-governance/"
+  url: "/en/research/dns-security-governance/dns-hijacking/"
 -
   title: "2026 DNS Security Governance Report"
   url: "/en/reports/2026-dns-security-governance-report/"
@@ -81,7 +81,7 @@ DNSSEC deployment is recommended for domains where DNS integrity is critical, pa
 
 - [DNS Security Governance Research](/en/research/dns-security-governance/)
 - [DNSSEC Deployment Guide](/en/research/dns-security-governance/dnssec/)
-- [DNS Hijacking Prevention](/en/research/dns-security-governance/)
+- [DNS Hijacking Prevention](/en/research/dns-security-governance/dns-hijacking/)
 - [2026 DNS Security Governance Report](/en/reports/2026-dns-security-governance-report/)
 - [Private Domain Registration](/en/library/private-domain-registration/)
 - [Buying Domains with Crypto](/en/library/buy-domain-with-crypto/)

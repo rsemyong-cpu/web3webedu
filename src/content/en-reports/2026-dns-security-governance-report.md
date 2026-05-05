@@ -46,8 +46,8 @@ related:
     url: "/en/research/dns-security-governance/"
   - title: "Why DNSSEC Matters"
     url: "/en/research/dns-security-governance/dnssec/"
-  - title: "DNSSEC Deployment Research"
-    url: "/en/research/dns-security-governance/dnssec/"
+  - title: "DNS Hijacking Prevention"
+    url: "/en/research/dns-security-governance/dns-hijacking/"
   - title: "Private Domain Registration Guide"
     url: "/en/library/private-domain-registration/"
   - title: "USDT Domain Report"
@@ -88,6 +88,6 @@ Quarterly dataset updates, monthly core reference checks, and news observations 
 
 - [DNS Security and Governance Guide](/en/research/dns-security-governance/)
 - [Why DNSSEC Matters](/en/research/dns-security-governance/dnssec/)
-- [DNSSEC Deployment Research](/en/research/dns-security-governance/dnssec/)
+- [DNS Hijacking Prevention](/en/research/dns-security-governance/dns-hijacking/)
 - [Private Domain Registration Guide](/en/library/private-domain-registration/)
 - [USDT Domain Report](/en/reports/2026-usdt-domain-report/)
